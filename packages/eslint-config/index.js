@@ -101,6 +101,7 @@ const config = {
         ],
       },
     ],
+    'no-unused-vars': 'off',
     'no-dupe-keys': 'error',
     'no-duplicate-case': 'error',
     'no-extra-boolean-cast': 'off',
@@ -262,7 +263,6 @@ const config = {
       rules: {
         // vanilla rule can get type variable usage incorrect
         '@typescript-eslint/no-unused-vars': 'off',
-        'no-unused-vars': 'off',
 
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
         '@typescript-eslint/prefer-nullish-coalescing': 'error',
