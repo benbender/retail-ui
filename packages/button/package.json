@@ -1,0 +1,46 @@
+{
+  "name": "@retail-ui/button",
+  "version": "0.1.0",
+  "description": "Button component",
+  "keywords": [
+    "react",
+    "components",
+    "button",
+    "typescript",
+    "tsdx"
+  ],
+  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/button#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "main": "dist/index.js",
+  "module": "dist/button.esm.production.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "directory": "packages/button",
+    "type": "git",
+    "url": "git+https://github.com/sondh0127/retail-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sondh0127/retail-ui/issues"
+  },
+  "scripts": {
+    "start": "tsdx watch --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,6 @@
+# Keep in sync with .gitignore + .prettierignore
+**/node_modules
+**/dist
+**/.cache
+**/coverage
+storybook-static
