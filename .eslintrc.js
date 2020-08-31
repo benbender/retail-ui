@@ -1,4 +1,4 @@
-const config = require('./packages/eslint-config/index');
+const config = require('./packages/eslint-config/index')
 
 /**
  * @type {import("eslint").Linter.Config}
@@ -6,4 +6,4 @@ const config = require('./packages/eslint-config/index');
 module.exports = {
   root: true,
   ...config,
-};
+}

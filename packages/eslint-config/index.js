@@ -16,10 +16,10 @@ const config = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
+    ecmaVersion: 2020, // Use the latest ecmascript standard
+    sourceType: 'module', // Allows using import/export statements
     ecmaFeatures: {
-      jsx: true,
+      jsx: true, // Enable JSX since we're using React
     },
   },
   settings: {
@@ -31,6 +31,7 @@ const config = {
     },
   },
   plugins: [
+    'simple-import-sort',
     'prettier',
     '@typescript-eslint',
     'cypress',
@@ -52,6 +53,7 @@ const config = {
     'prettier/standard',
     'prettier/unicorn',
     'eslint:recommended',
+    'plugin:prettier/recommended',
     'plugin:cypress/recommended',
     'plugin:import/errors',
     'plugin:import/typescript',
@@ -70,7 +72,13 @@ const config = {
      * Prettier Plugin Rules
      * @see https://github.com/prettier/eslint-plugin-prettier
      * */
-    'prettier/prettier': 'error',
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+
+    /**
+     * Sort Import Plugin Rules
+     * @see https://github.com/lydell/eslint-plugin-simple-import-sort
+     * */
+    'simple-import-sort/sort': 'error',
 
     /**
      * Vanilla ESLint Rules
@@ -82,7 +90,8 @@ const config = {
         paths: [
           {
             name: '@testing-library/jest-dom',
-            message: 'This is done globally. You do not need to import it in your test files.',
+            message:
+              'This is done globally. You do not need to import it in your test files.',
           },
           {
             name: 'lodash',
@@ -106,6 +115,7 @@ const config = {
      * */
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
+    'react/prop-types': 'off',
 
     /**
      * Import Plugin Rules
@@ -125,7 +135,14 @@ const config = {
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
       },
     ],
     'import/no-default-export': 'error',
@@ -136,8 +153,25 @@ const config = {
      * JSX-A11Y Plugin Rules
      * @see https://github.com/evcohen/eslint-plugin-jsx-a11y#supported-rules
      * */
-    // 'jsx-a11y/anchor-is-valid': [] // we'll need to customize this to match all our abstracted anchor implementations
-    // 'jsx-a11y/label-has-associated-control': [] // we'll need to customize this to match all our abstracted form
+    // Targeting Next.js
+    'jsx-a11y/anchor-is-valid': [
+      'off',
+      {
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
+      },
+    ], // we'll need to customize this to match all our abstracted anchor implementations
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        labelComponents: [],
+        labelAttributes: [],
+        controlComponents: [],
+        assert: 'either',
+        depth: 25,
+      },
+    ], // we'll need to customize this to match all our abstracted form
 
     /**
      * Lodash Plugin Rules
@@ -227,7 +261,7 @@ const config = {
       files: ['**/*.{ts,tsx}'],
       rules: {
         // vanilla rule can get type variable usage incorrect
-        '@typescript-eslint/no-unused-vars': 'error',
+        '@typescript-eslint/no-unused-vars': 'off',
         'no-unused-vars': 'off',
 
         '@typescript-eslint/no-unnecessary-type-assertion': 'error',
@@ -363,6 +397,6 @@ const config = {
       },
     },
   ],
-};
+}
 
-module.exports = config;
+module.exports = config
