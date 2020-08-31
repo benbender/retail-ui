@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/heroicons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The Heroicons component of @retail-ui",
   "keywords": [
     "react",
@@ -43,6 +43,6 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/icon": "0.1.0"
+    "@retail-ui/icon": "^0.2.0"
   }
 }
