@@ -6,7 +6,7 @@ import * as React from 'react'
 
 type ReactButtonProps = Pick<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
-  'type' | 'disabled' | 'onClick'
+  'type' | 'onClick'
 >
 
 export type ButtonColor = keyof Theme['ButtonStyles']['variant']['default']
@@ -26,82 +26,88 @@ export type ButtonProps = ReactButtonProps &
     iconLeft?: React.ComponentType<IconProps>
     iconRight?: React.ComponentType<IconProps>
     isLoading?: boolean
+    isDisabled?: boolean
+    isBlock?: boolean
   }>
 
 type Ref = HTMLButtonElement
 
-export const Button = React.forwardRef<Ref, ButtonProps>(
-  (
-    {
-      children,
-      className,
-      spinnerClassName,
-      disabled,
-      block,
-      isLoading,
-      variant = 'default',
-      color = 'primary',
-      size = 'base',
-      iconLeft,
-      iconRight,
-      shape,
-      onClick,
-    },
-    ref,
-  ) => {
-    const {
-      theme: { ButtonStyles },
-    } = useThemeCtx()
+export const Button = React.forwardRef<Ref, ButtonProps>((props, ref) => {
+  const {
+    children,
+    className,
+    spinnerClassName,
+    isDisabled,
+    isBlock,
+    isLoading,
+    variant = 'default',
+    color = 'primary',
+    size = 'base',
+    iconLeft,
+    iconRight,
+    shape,
+    onClick,
+    ...rest
+  } = props
 
-    const variantCls = ButtonStyles.variant
+  const {
+    theme: { ButtonStyles },
+  } = useThemeCtx()
 
-    const colorCls = variantCls[variant]
-    const sizeCls = ButtonStyles.size
-    const shapeCls = ButtonStyles.shape
+  const variantCls = ButtonStyles.variant
 
-    const IconLeft = iconLeft
-    const IconRight = iconRight
+  const colorCls = variantCls[variant]
+  const sizeCls = ButtonStyles.size
+  const shapeCls = ButtonStyles.shape
 
-    const cls = clsx(
-      ButtonStyles.base,
-      disabled && ButtonStyles.disabled,
-      block && ButtonStyles.block,
-      isLoading && ButtonStyles.loading,
-      colorCls[color],
-      sizeCls[size],
-      shape && shapeCls[shape],
-      className,
-    )
-    // Spinner
-    const spinnerSizeCls = ButtonStyles.spinner.size
-    const spinnerCls = clsx('absolute', spinnerSizeCls[size], spinnerClassName)
-    const isLoadingCls = isLoading ? 'opacity-0' : 'opacity-100'
+  const IconLeft = iconLeft
+  const IconRight = iconRight
 
-    const iconCls = ButtonStyles.icon
-    const iconSizeCls = iconCls['size']
+  const cls = clsx(
+    ButtonStyles.base,
+    isDisabled && ButtonStyles.disabled,
+    isBlock && ButtonStyles.block,
+    isLoading && ButtonStyles.loading,
+    colorCls[color],
+    sizeCls[size],
+    shape && shapeCls[shape],
+    className,
+  )
+  // Spinner
+  const spinnerSizeCls = ButtonStyles.spinner.size
+  const spinnerCls = clsx('absolute', spinnerSizeCls[size], spinnerClassName)
+  const isLoadingCls = isLoading ? 'opacity-0' : 'opacity-100'
 
-    const iconLeftCls = clsx(
-      children && iconCls.variant.left,
-      isLoadingCls,
-      iconSizeCls[size],
-    )
-    const iconRightCls = clsx(
-      children && iconCls.variant.right,
-      isLoadingCls,
-      iconSizeCls[size],
-    )
+  const iconCls = ButtonStyles.icon
+  const iconSizeCls = iconCls['size']
 
-    return (
-      <button ref={ref} className={cls} disabled={disabled} onClick={onClick}>
-        {isLoading && <Spinner className={spinnerCls} />}
-        {IconLeft && <IconLeft className={iconLeftCls} />}
-        <span className={isLoading ? 'opacity-0' : 'opacity-100'}>
-          {children}
-        </span>
-        {IconRight && <IconRight className={iconRightCls} />}
-      </button>
-    )
-  },
-)
+  const iconLeftCls = clsx(
+    children && iconCls.variant.left,
+    isLoadingCls,
+    iconSizeCls[size],
+  )
+  const iconRightCls = clsx(
+    children && iconCls.variant.right,
+    isLoadingCls,
+    iconSizeCls[size],
+  )
+
+  return (
+    <button
+      ref={ref}
+      className={cls}
+      disabled={isDisabled}
+      onClick={onClick}
+      {...rest}
+    >
+      {isLoading && <Spinner className={spinnerCls} />}
+      {IconLeft && <IconLeft className={iconLeftCls} />}
+      <span className={isLoading ? 'opacity-0' : 'opacity-100'}>
+        {children}
+      </span>
+      {IconRight && <IconRight className={iconRightCls} />}
+    </button>
+  )
+})
 
 Button.displayName = 'Button'

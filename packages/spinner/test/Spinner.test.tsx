@@ -1,15 +1,11 @@
-import { fireEvent, render } from '@testing-library/react'
+import { render } from '@retail-ui/test-utils'
 import * as React from 'react'
 
-import SpinnerMeta, * as Spinner from '../stories/Spinner.stories'
+import * as Spinner from '../stories/Spinner.stories'
 
 describe('Spinner', () => {
-  it('should fire callback onclick', () => {
-    const onClick = jest.fn()
-    const { getByTestId } = render(<Spinner.Simple {...{ onClick }} />)
-
-    expect(onClick).not.toHaveBeenCalled()
-    fireEvent.click(getByTestId(SpinnerMeta.title))
-    expect(onClick).toHaveBeenCalledTimes(1)
+  it('renders correctly', () => {
+    const { asFragment } = render(<Spinner.Simple />)
+    expect(asFragment()).toMatchSnapshot()
   })
 })

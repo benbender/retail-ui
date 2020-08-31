@@ -1,7 +1,7 @@
-import { fireEvent, render } from '@testing-library/react'
+import { render } from '@retail-ui/test-utils'
 import * as React from 'react'
 
-import IconMeta, * as Icon from '../stories/Icon.stories'
+import * as Icon from '../stories/Icon.stories'
 
 describe('Icon', () => {
   it('renders correctly', () => {
