@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { ThemeProvider, defaultTheme } from '@retail-ui/theme'
-import '../tailwind.css'
+import '../styles/tailwind.css'
 
 export const parameters = {
   actions: { argTypesRegex: '^on.*' },

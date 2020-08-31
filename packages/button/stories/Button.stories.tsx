@@ -18,3 +18,17 @@ export const Basic = Template.bind({})
 Basic.args = {
   children: 'Button',
 }
+
+export const Block = Template.bind({})
+// @ts-ignore
+Block.args = {
+  children: 'Button',
+  isBlock: true,
+}
+
+export const Disabled = Template.bind({})
+// @ts-ignore
+Disabled.args = {
+  children: 'Button',
+  isDisabled: true,
+}
