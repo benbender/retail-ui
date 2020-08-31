@@ -1,9 +1,17 @@
-import React from 'react';
+import * as React from 'react'
+import { ThemeProvider, defaultTheme } from '@retail-ui/theme'
+import '../tailwind.css'
 
 export const parameters = {
   actions: { argTypesRegex: '^on.*' },
-};
+}
 
-const ThemeWrapper = (Story) => <Story />;
+const ThemeWrapper = (Story) => {
+  return (
+    <ThemeProvider value={{ theme: defaultTheme }}>
+      <Story />
+    </ThemeProvider>
+  )
+}
 
-export const decorators = [ThemeWrapper];
+export const decorators = [ThemeWrapper]
