@@ -1,3 +1,3 @@
 export type testID = {
-  ['data-testid']?: string;
-};
+  ['data-testid']?: string
+}
