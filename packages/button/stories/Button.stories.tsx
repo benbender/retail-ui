@@ -1,3 +1,4 @@
+import { action, actions } from '@storybook/addon-actions'
 import * as React from 'react'
 
 import { Button, ButtonProps } from '../src/Button'
@@ -10,11 +11,16 @@ const meta = {
 export default meta
 
 const Template = (args: ButtonProps) => (
-  <Button {...args} data-testid={meta.title} />
+  <Button
+    {...args}
+    data-testid={meta.title}
+    onClick={action('Click handler')}
+    {...actions('onClick')}
+  />
 )
 
-export const Simple = Template.bind({})
+export const Basic = Template.bind({})
 // @ts-ignore
-Simple.args = {
+Basic.args = {
   children: 'Button',
 }
