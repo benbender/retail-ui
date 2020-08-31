@@ -1,4 +1,4 @@
-import { createCtx } from '@retail-ui/ultis'
+import { useCreateCtx } from '@retail-ui/hooks'
 
 import { Theme } from './defaultTheme'
 
@@ -6,4 +6,5 @@ export type ThemeValue = {
   theme: Theme
 }
 
-export const [useThemeCtx, ThemeProvider] = createCtx<ThemeValue>()
+// eslint-disable-next-line react-hooks/rules-of-hooks
+export const [useThemeCtx, ThemeProvider] = useCreateCtx<ThemeValue>()
