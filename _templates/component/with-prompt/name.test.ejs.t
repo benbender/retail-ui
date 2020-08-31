@@ -1,5 +1,5 @@
 ---
-to: packages/<%= name %>/tests/<%= h.changeCase.pascal(name) %>.test.tsx
+to: packages/<%= name %>/test/<%= h.changeCase.pascal(name) %>.test.tsx
 ---
 import * as React from 'react';
 import { render, fireEvent } from '@testing-library/react';
