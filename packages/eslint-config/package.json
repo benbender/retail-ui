@@ -50,5 +50,6 @@
     "eslint-plugin-testing-library": "^3.6.0",
     "eslint-plugin-unicorn": "^21.0.0",
     "prettier": "^2.0.5"
-  }
+  },
+  "gitHead": "929e4cfdd6ed4fd576af406c5281e9942717524f"
 }

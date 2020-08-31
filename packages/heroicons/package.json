@@ -44,5 +44,6 @@
   },
   "devDependencies": {
     "@retail-ui/icon": "^0.2.0"
-  }
+  },
+  "gitHead": "929e4cfdd6ed4fd576af406c5281e9942717524f"
 }
