@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/eslint-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The Prettier + ESLint configuration",
   "keywords": [
     "eslint"
