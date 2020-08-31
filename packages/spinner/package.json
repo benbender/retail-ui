@@ -1,0 +1,48 @@
+{
+  "name": "@retail-ui/spinner",
+  "version": "0.1.0",
+  "description": "The Spinner component of @retail-ui",
+  "keywords": [
+    "react",
+    "components",
+    "Spinner",
+    "typescript",
+    "tsdx"
+  ],
+  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/spinner#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "main": "dist/index.js",
+  "module": "dist/spinner.esm.production.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "directory": "packages/spinner",
+    "type": "git",
+    "url": "git+https://github.com/sondh0127/retail-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sondh0127/retail-ui/issues"
+  },
+  "scripts": {
+    "start": "tsdx watch --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "@retail-ui/theme": "0.1.0"
+  }
+}
