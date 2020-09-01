@@ -2,7 +2,7 @@
 to: packages/<%= name %>/test/<%= h.changeCase.pascal(name) %>.test.tsx
 ---
 import * as React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '@retail-ui/test-utils';
 
 import <%= h.changeCase.pascal(name) %>Meta, * as <%= h.changeCase.pascal(name) %> from '../stories/<%= h.changeCase.pascal(name) %>.stories';
 
