@@ -2,7 +2,7 @@
 to: packages/<%= name %>/stories/<%= h.changeCase.pascal(name) %>.stories.tsx
 ---
 import * as React from 'react';
-import { <%= h.changeCase.pascal(name) %>, <%= h.changeCase.pascal(name) %>Props } from '../src/<%= h.changeCase.pascal(name) %>';
+import { <%= h.changeCase.pascal(name) %>, <%= h.changeCase.pascal(name) %>Props } from '../src';
 
 const meta = {
   title: 'Retail-UI/<%= h.changeCase.pascal(name) %>',
