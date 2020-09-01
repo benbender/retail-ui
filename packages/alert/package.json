@@ -1,0 +1,50 @@
+{
+  "name": "@retail-ui/alert",
+  "version": "0.2.0",
+  "description": "The Alert component of @retail-ui",
+  "keywords": [
+    "react",
+    "components",
+    "Alert",
+    "typescript",
+    "tsdx"
+  ],
+  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/alert#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "main": "dist/index.js",
+  "module": "dist/alert.esm.production.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "directory": "packages/alert",
+    "type": "git",
+    "url": "git+https://github.com/sondh0127/retail-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sondh0127/retail-ui/issues"
+  },
+  "scripts": {
+    "start": "tsdx watch --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "@retail-ui/theme": "^0.2.1",
+    "@retail-ui/heroicons": "^0.2.1",
+    "@retail-ui/button-icon": "0.2.0"
+  }
+}

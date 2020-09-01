@@ -1,4 +1,6 @@
 import { ActionButtonsStyles } from './styles/ActionButtonsStyles'
+import { AlertStyles } from './styles/AlertStyles'
+import { ButtonIconStyles } from './styles/ButtonIconStyles'
 import { ButtonStyles } from './styles/ButtonStyles'
 import { IconStyles } from './styles/IconStyles'
 import { SpinnerStyles } from './styles/SpinnerStyles'
@@ -8,6 +10,8 @@ export const defaultTheme = {
   IconStyles,
   SpinnerStyles,
   ActionButtonsStyles,
+  AlertStyles,
+  ButtonIconStyles,
 }
 
 export type Theme = typeof defaultTheme
