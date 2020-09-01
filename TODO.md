@@ -4,9 +4,9 @@ Project Description
 
 ### Todo
 
+- [ ] IconButton
 - [ ] 🔎 core
 - [ ] Docs
-- [ ] ActionButtons
 - [ ] Alert
 - [ ] Avatar
 - [ ] Badge
@@ -26,10 +26,9 @@ Project Description
 
 ### In Progress
 
-- [ ] IconButton
-
 ### Done ✓
 
+- [x] ActionButtons
 - [x] Theme
 - [x] Icon
 - [x] Spinner
