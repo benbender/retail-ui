@@ -2,16 +2,12 @@
 
 Project Description
 
-### Todo
+---
 
-- [ ] IconButton
+### **Todo**
+
 - [ ] 🔎 core
 - [ ] Docs
-- [ ] Alert
-- [ ] Avatar
-- [ ] Badge
-- [ ] Breadcrumb
-- [ ] Card
 - [ ] Checkbox
 - [ ] Collapse
 - [ ] Dialog
@@ -28,6 +24,12 @@ Project Description
 
 ### Done ✓
 
+- [x] Card
+- [x] Breadcrumb
+- [x] Badge
+- [x] Alert
+- [x] Avatar
+- [x] ButtonIcon
 - [x] ActionButtons
 - [x] Theme
 - [x] Icon
