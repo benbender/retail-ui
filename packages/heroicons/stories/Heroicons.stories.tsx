@@ -1,6 +1,7 @@
+import { IconProps } from '@retail-ui/icon'
 import * as React from 'react'
 
-import { AcademicCapOutline, IconProps } from '../src'
+import { AcademicCapOutline } from '../src'
 
 const meta = {
   title: 'Retail-UI/Heroicon',
