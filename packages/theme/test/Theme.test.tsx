@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '@retail-ui/test-utils'
 import * as React from 'react'
 
 import { defaultTheme, ThemeProvider, useThemeCtx } from '../src'

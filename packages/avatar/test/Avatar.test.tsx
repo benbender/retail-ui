@@ -1,11 +1,11 @@
 import { render } from '@retail-ui/test-utils'
 import * as React from 'react'
 
-import * as Heroicons from '../stories/Heroicons.stories'
+import * as Avatar from '../stories/Avatar.stories'
 
-describe('Heroicons', () => {
+describe('Avatar', () => {
   it('renders correctly', () => {
-    const { asFragment } = render(<Heroicons.Simple />)
+    const { asFragment } = render(<Avatar.Simple />)
     expect(asFragment()).toMatchSnapshot()
   })
 })

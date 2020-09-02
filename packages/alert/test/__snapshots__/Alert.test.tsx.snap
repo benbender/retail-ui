@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="font-medium relative overflow-hidden border-2 border-solid rounded-md duration-150 ease-in flex items-center justify-start bg-purple-200 border-purple-200 text-purple-800 py-2 pl-4 pr-4 text-base"
+    role="alert"
+  >
+    Test title
+  </div>
+</DocumentFragment>
+`;

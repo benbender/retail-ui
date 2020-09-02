@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionButtons renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="inline-flex space-x-2 justify-between"
+  >
+    <button
+      class="inline-flex items-center justify-center leading-5 align-bottom transition-colors duration-150 ease-in transform scale-100 border cursor-pointer focus:outline-none dark:focus:shadow-outline-gray active:scale-95 overflow-hidden no-underline select-none text-white bg-gray-600 border-gray-600 active:shadow-outline-gray focus:bg-gray-700 hover:bg-gray-700 py-1 px-3 text-sm rounded-md"
+      data-testid="Retail-UI/ActionButtons"
+      type="button"
+    >
+      <span
+        class="opacity-100"
+      >
+        Cancel
+      </span>
+    </button>
+    <button
+      class="inline-flex items-center justify-center leading-5 align-bottom transition-colors duration-150 ease-in transform scale-100 border cursor-pointer focus:outline-none dark:focus:shadow-outline-gray active:scale-95 overflow-hidden no-underline select-none text-white bg-purple-600 border-transparent active:shadow-outline-purple focus:bg-purple-700 hover:bg-purple-700 py-1 px-3 text-sm rounded-md"
+      data-testid="Retail-UI/ActionButtons"
+      type="button"
+    >
+      <span
+        class="opacity-100"
+      >
+        Submit
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;

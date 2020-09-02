@@ -59,4 +59,4 @@ export const render = (
   )
 }
 
-export { fireEvent } from '@testing-library/react'
+export { fireEvent, screen } from '@testing-library/react'
