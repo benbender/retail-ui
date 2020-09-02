@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/button",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Button component",
   "keywords": [
     "react",
@@ -43,7 +43,7 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/heroicons": "^0.2.2",
+    "@retail-ui/heroicons": "^0.2.3",
     "@retail-ui/icon": "^0.2.2",
     "@retail-ui/spinner": "^0.2.2",
     "@retail-ui/theme": "^0.3.0"
