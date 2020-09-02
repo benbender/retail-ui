@@ -1,22 +1,22 @@
 {
-  "name": "@retail-ui/action-buttons",
-  "version": "0.3.1",
-  "description": "The ActionButtons component of @retail-ui",
+  "name": "@retail-ui/core",
+  "version": "0.2.0",
+  "description": "The Core component of @retail-ui",
   "keywords": [
     "react",
     "components",
-    "ActionButtons",
+    "Core",
     "typescript",
     "tsdx"
   ],
-  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/action-buttons#readme",
+  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/core#readme",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "main": "dist/index.js",
-  "module": "dist/action-buttons.esm.production.js",
+  "module": "dist/core.esm.production.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
@@ -26,7 +26,7 @@
     "node": ">=10"
   },
   "repository": {
-    "directory": "packages/action-buttons",
+    "directory": "packages/core",
     "type": "git",
     "url": "git+https://github.com/sondh0127/retail-ui.git"
   },
@@ -43,7 +43,18 @@
     "react": ">=16"
   },
   "devDependencies": {
+    "@retail-ui/action-buttons": "^0.3.1",
+    "@retail-ui/alert": "^0.3.1",
+    "@retail-ui/avatar": "^0.2.0",
+    "@retail-ui/badge": "^0.3.1",
+    "@retail-ui/breadcrumb": "^0.3.0",
     "@retail-ui/button": "^0.2.4",
+    "@retail-ui/button-icon": "^0.3.0",
+    "@retail-ui/card": "^0.2.0",
+    "@retail-ui/heroicons": "^0.2.3",
+    "@retail-ui/hooks": "^0.2.1",
+    "@retail-ui/icon": "^0.2.2",
+    "@retail-ui/spinner": "^0.2.2",
     "@retail-ui/theme": "^0.3.0"
   }
 }

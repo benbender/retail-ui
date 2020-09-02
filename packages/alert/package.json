@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/alert",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "The Alert component of @retail-ui",
   "keywords": [
     "react",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@retail-ui/button-icon": "^0.3.0",
-    "@retail-ui/heroicons": "^0.2.2",
+    "@retail-ui/heroicons": "^0.2.3",
     "@retail-ui/theme": "^0.3.0"
   }
 }

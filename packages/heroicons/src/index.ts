@@ -1,4 +1,3 @@
-export { IconProps, SVGRef } from '@retail-ui/icon'
 export * from './AcademicCapOutline'
 export * from './AcademicCapSolid'
 export * from './ArrowCircleRightOutline'
