@@ -42,7 +42,7 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "devDependencies": {
+  "dependencies": {
     "@retail-ui/action-buttons": "^0.3.1",
     "@retail-ui/alert": "^0.3.1",
     "@retail-ui/avatar": "^0.2.0",
