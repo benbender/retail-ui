@@ -51,7 +51,7 @@ export const Avatar = React.forwardRef<Ref, AvatarProps>((props, ref) => {
     // title
     const titleSizeCls = AvatarStyles.title.size
     const titleCls = clsx(AvatarStyles.title.base, titleSizeCls[size])
-    childrenToRender = <span className={titleCls}>PJ</span>
+    childrenToRender = <span className={titleCls}>{title}</span>
   }
 
   return (

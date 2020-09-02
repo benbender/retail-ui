@@ -1,5 +1,4 @@
-import { render } from '@retail-ui/test-utils'
-import { fireEvent } from '@testing-library/react'
+import { fireEvent, render } from '@retail-ui/test-utils'
 import * as React from 'react'
 
 import ButtonMeta, * as Button from '../stories/Button.stories'

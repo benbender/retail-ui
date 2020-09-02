@@ -1,15 +1,11 @@
-import { fireEvent, render } from '@testing-library/react'
+import { render } from '@retail-ui/test-utils'
 import * as React from 'react'
 
-import AlertMeta, * as Alert from '../stories/Alert.stories'
+import * as Alert from '../stories/Alert.stories'
 
 describe('Alert', () => {
-  it('should fire callback onclick', () => {
-    const onClick = jest.fn()
-    const { getByTestId } = render(<Alert.Simple {...{ onClick }} />)
-
-    expect(onClick).not.toHaveBeenCalled()
-    fireEvent.click(getByTestId(AlertMeta.title))
-    expect(onClick).toHaveBeenCalledTimes(1)
+  it('renders correctly', () => {
+    const { asFragment } = render(<Alert.Simple title="Test title" />)
+    expect(asFragment()).toMatchSnapshot()
   })
 })

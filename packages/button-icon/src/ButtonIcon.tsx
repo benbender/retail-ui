@@ -41,6 +41,7 @@ export const ButtonIcon = React.forwardRef<Ref, ButtonIconProps>(
       icon,
       shape,
       onClick,
+      ...rest
     } = props
 
     const {
@@ -73,7 +74,13 @@ export const ButtonIcon = React.forwardRef<Ref, ButtonIconProps>(
     const iconCls = clsx(iconSizeCls[size], isLoadingCls)
 
     return (
-      <button ref={ref} className={cls} disabled={isDisabled} onClick={onClick}>
+      <button
+        ref={ref}
+        className={cls}
+        disabled={isDisabled}
+        onClick={onClick}
+        {...rest}
+      >
         {isLoading && <Spinner className={spinnerCls} />}
         <Icon className={iconCls} />
       </button>

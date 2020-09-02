@@ -1,15 +1,11 @@
-import { fireEvent, render } from '@testing-library/react'
+import { render } from '@retail-ui/test-utils'
 import * as React from 'react'
 
-import AvatarMeta, * as Avatar from '../stories/Avatar.stories'
+import * as Avatar from '../stories/Avatar.stories'
 
 describe('Avatar', () => {
-  it('should fire callback onclick', () => {
-    const onClick = jest.fn()
-    const { getByTestId } = render(<Avatar.Simple {...{ onClick }} />)
-
-    expect(onClick).not.toHaveBeenCalled()
-    fireEvent.click(getByTestId(AvatarMeta.title))
-    expect(onClick).toHaveBeenCalledTimes(1)
+  it('renders correctly', () => {
+    const { asFragment } = render(<Avatar.Simple />)
+    expect(asFragment()).toMatchSnapshot()
   })
 })

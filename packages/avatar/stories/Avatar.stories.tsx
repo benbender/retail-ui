@@ -16,5 +16,6 @@ const Template = (args: AvatarProps) => (
 export const Simple = Template.bind({})
 // @ts-ignore
 Simple.args = {
+  title: 'SimpleTest',
   src: `https://pbs.twimg.com/profile_images/1285102166709919744/XvlWrJny_400x400.jpg`,
 }

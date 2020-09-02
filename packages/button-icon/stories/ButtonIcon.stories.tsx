@@ -11,9 +11,11 @@ const meta = {
 export default meta
 
 const Template = (args: ButtonIconProps) => (
-  <ButtonIcon icon={AcademicCapSolid} {...args} data-testid={meta.title} />
+  <ButtonIcon {...args} data-testid={meta.title} />
 )
 
 export const Simple = Template.bind({})
 // @ts-ignore
-Simple.args = {}
+Simple.args = {
+  icon: AcademicCapSolid,
+}

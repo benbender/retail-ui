@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb renders correctly 1`] = `
+<DocumentFragment>
+  <ul
+    class="flex flex-wrap py-1 px-3 list-none rounded relative whitespace-no-wrap mt-0 mb-0"
+  >
+    <li
+      class="text-gray-600 flex items-center mt-0 mb-0  text-base"
+    >
+      <span>
+        <a
+          href="#"
+        >
+          Dashboard
+        </a>
+      </span>
+    </li>
+    <span
+      class="inline-block px-3 text-gray-600 last:hidden"
+    >
+      /
+    </span>
+    <li
+      class="text-gray-600 flex items-center mt-0 mb-0  text-base"
+    >
+      <span>
+        <a
+          href="#"
+        >
+          Project
+        </a>
+      </span>
+    </li>
+    <span
+      class="inline-block px-3 text-gray-600 last:hidden"
+    >
+      /
+    </span>
+    <li
+      class="text-gray-600 flex items-center mt-0 mb-0  text-gray-900 no-underline text-base"
+    >
+      <span>
+        Export
+      </span>
+    </li>
+    <span
+      class="inline-block px-3 text-gray-600 last:hidden"
+    >
+      /
+    </span>
+  </ul>
+</DocumentFragment>
+`;
