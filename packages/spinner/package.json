@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/spinner",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "The Spinner component of @retail-ui",
   "keywords": [
     "react",
@@ -43,7 +43,7 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/theme": "^0.2.1"
+    "@retail-ui/theme": "^0.3.0"
   },
   "gitHead": "929e4cfdd6ed4fd576af406c5281e9942717524f"
 }

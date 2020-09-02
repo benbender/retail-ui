@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/button-icon",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "The ButtonIcon component of @retail-ui",
   "keywords": [
     "react",
@@ -43,8 +43,8 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/theme": "^0.2.1",
-    "@retail-ui/icon": "^0.2.1",
-    "@retail-ui/spinner": "^0.2.1"
+    "@retail-ui/icon": "^0.2.2",
+    "@retail-ui/spinner": "^0.2.2",
+    "@retail-ui/theme": "^0.3.0"
   }
 }

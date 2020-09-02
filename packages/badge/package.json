@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/badge",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "The Badge component of @retail-ui",
   "keywords": [
     "react",
@@ -43,8 +43,8 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/theme": "^0.2.1",
-    "@retail-ui/button-icon": "0.2.0",
-    "@retail-ui/heroicons": "^0.2.1"
+    "@retail-ui/button-icon": "^0.3.0",
+    "@retail-ui/heroicons": "^0.2.2",
+    "@retail-ui/theme": "^0.3.0"
   }
 }
