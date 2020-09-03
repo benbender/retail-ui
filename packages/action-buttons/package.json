@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/action-buttons",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "The ActionButtons component of @retail-ui",
   "keywords": [
     "react",
@@ -43,7 +43,7 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/button": "^0.2.4",
-    "@retail-ui/theme": "^0.3.0"
+    "@retail-ui/button": "^0.2.5",
+    "@retail-ui/theme": "^0.3.1"
   }
 }

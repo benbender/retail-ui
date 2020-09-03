@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/core@0.2.1...@retail-ui/core@0.4.0) (2020-09-03)
+
+### Features
+
+- **core:** provide resolveConfig, used to merge user config ([a698c89](https://github.com/sondh0127/retail-ui/commit/a698c899c846cb30c07ee017ad6d657e80f66283))
+
+### BREAKING CHANGES
+
+- **core:** use resolveConfig in tailwind.config.js to merge @retail/ui default
+
 # [0.3.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/core@0.2.1...@retail-ui/core@0.3.0) (2020-09-03)
 
 ### Features

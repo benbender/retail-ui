@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/card",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "The Card component of @retail-ui",
   "keywords": [
     "react",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@retail-ui/hooks": "^0.2.1",
-    "@retail-ui/spinner": "^0.2.2",
-    "@retail-ui/theme": "^0.3.0"
+    "@retail-ui/spinner": "^0.2.3",
+    "@retail-ui/theme": "^0.3.1"
   }
 }
