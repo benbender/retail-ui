@@ -3646,7 +3646,7 @@
     "@svgr/plugin-svgo" "^5.4.0"
     loader-utils "^2.0.0"
 
-"@tailwindcss/custom-forms@^0.2.1":
+"@tailwindcss/custom-forms@0.2.1", "@tailwindcss/custom-forms@^0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@tailwindcss/custom-forms/-/custom-forms-0.2.1.tgz#40e5ed1fff6d29d8ed1c508a0b2aaf8da96962e0"
   integrity sha512-XdP5XY6kxo3x5o50mWUyoYWxOPV16baagLoZ5uM41gh6IhXzhz/vJYzqrTb/lN58maGIKlpkxgVsQUNSsbAS3Q==
@@ -17264,7 +17264,7 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss-multi-theme@^1.0.3:
+tailwindcss-multi-theme@1.0.3, tailwindcss-multi-theme@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tailwindcss-multi-theme/-/tailwindcss-multi-theme-1.0.3.tgz#06ee2a5f65777d8bdc5a5da6672ea7ee5615efe2"
   integrity sha512-fHIhjZEBNIRxrf8PQIlGarsio2ryiNYIH5yEvFeCC1w7a17c+BkirsZ7YE3/PRcUkpIXTB7OEa3cdKtXeKxW5g==
