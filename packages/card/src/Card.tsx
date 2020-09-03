@@ -29,8 +29,8 @@ export const Card = React.forwardRef<Ref, CardProps>((props, ref) => {
 
   const cls = clsx(
     className,
-    isStatic && CardStyles.base,
-    !CardStyles.hov,
+    CardStyles.base,
+    !isStatic && CardStyles.hov,
     CardStyles.color[color],
   )
 

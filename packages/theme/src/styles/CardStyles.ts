@@ -19,21 +19,24 @@ export const CardStyles = {
     },
     subtitle: `text-gray-600 text-sm`,
   },
+  // class="
   body: {
-    base: `px-3 py-2 flex-auto max-h-full`,
+    base: `px-3 py-2 flex-auto max-h-full relative`,
     loading: {
-      base: `text-center text-sm flex justify-center items-center`,
+      base: `opacity-25 pointer-events-none cursor-default`,
+      spinner: `absolute inset-0 m-auto`,
       default: `text-purple-600`,
       success: `text-green-700`,
       danger: `text-red-700`,
       dark: `text-gray-100`,
     },
   },
+  // "
   // className="
   footer: {
     base: `px-3 py-2 rounded-b flex items-center`,
     transparent: `!bg-transparent border-t`,
-    loading: `opacity-50 pointer-events-none cursor-default`,
+    loading: `opacity-25 pointer-events-none cursor-default`,
     color: {
       default: `bg-gray-200 border-gray-200`,
       success: `bg-green-200 border-green-200 text-green-900`,

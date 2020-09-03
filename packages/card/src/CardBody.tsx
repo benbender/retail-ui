@@ -19,19 +19,18 @@ export const CardBody: React.FC<CardBodyProps> = (props) => {
   } = useThemeCtx()
 
   const headerStyle = CardStyles.body
-  const cls = clsx(
-    className,
-    headerStyle.base,
-    isLoading && headerStyle.loading.base,
-    isLoading && headerStyle.loading[color],
+  const cls = clsx(className, headerStyle.base)
+  const childrenCls = clsx(isLoading && headerStyle.loading.base)
+
+  const spinnerCls = clsx(
+    headerStyle.loading.spinner,
+    headerStyle.loading[color],
   )
 
-  let bodyRender
-  if (!isLoading) {
-    bodyRender = children
-  } else {
-    bodyRender = <Spinner />
-  }
-
-  return <div className={cls}>{bodyRender}</div>
+  return (
+    <div className={cls}>
+      <div className={childrenCls}>{children}</div>
+      {isLoading && <Spinner className={spinnerCls} />}
+    </div>
+  )
 }
