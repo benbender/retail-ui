@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/core",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "The Core component of @retail-ui",
   "keywords": [
     "react",
@@ -44,9 +44,6 @@
     "tailwindcss": ">=1"
   },
   "dependencies": {
-    "deepmerge": "^4.2.2",
-    "@tailwindcss/custom-forms": "0.2.1",
-    "tailwindcss-multi-theme": "1.0.3",
     "@retail-ui/action-buttons": "^0.3.1",
     "@retail-ui/alert": "^0.3.1",
     "@retail-ui/avatar": "^0.2.0",
@@ -59,6 +56,9 @@
     "@retail-ui/hooks": "^0.2.1",
     "@retail-ui/icon": "^0.2.2",
     "@retail-ui/spinner": "^0.2.2",
-    "@retail-ui/theme": "^0.3.0"
+    "@retail-ui/theme": "^0.3.0",
+    "@tailwindcss/custom-forms": "0.2.1",
+    "deepmerge": "^4.2.2",
+    "tailwindcss-multi-theme": "1.0.3"
   }
 }
