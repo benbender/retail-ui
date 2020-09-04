@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/avatar",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "The Avatar component of @retail-ui",
   "keywords": [
     "react",
@@ -43,7 +43,7 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/utils": "^0.3.0",
-    "@retail-ui/theme": "^0.3.1"
+    "@retail-ui/theme": "^0.4.0",
+    "@retail-ui/utils": "^0.4.0"
   }
 }

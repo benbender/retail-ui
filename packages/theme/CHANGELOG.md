@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/theme@0.3.1...@retail-ui/theme@0.4.0) (2020-09-04)
+
+### Bug Fixes
+
+- **card:** fix card body style ([bcf0271](https://github.com/sondh0127/retail-ui/commit/bcf027158e124e67b377bae8f2242e6da3bed22c))
+
+### Features
+
+- **all:** add and migrate all the other component from draft packages ([2401dcf](https://github.com/sondh0127/retail-ui/commit/2401dcffeed92aa322be2944d4cfa9b8002e6e53))
+
 ## [0.3.1](https://github.com/sondh0127/retail-ui/compare/@retail-ui/theme@0.3.0...@retail-ui/theme@0.3.1) (2020-09-03)
 
 **Note:** Version bump only for package @retail-ui/theme
