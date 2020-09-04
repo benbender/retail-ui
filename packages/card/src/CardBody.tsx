@@ -5,32 +5,37 @@ import * as React from 'react'
 
 import { useCardCtx } from './CardContext'
 
-interface CardBodyProps {
-  className?: string
-}
+type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
+type Ref = HTMLDivElement
 
-export const CardBody: React.FC<CardBodyProps> = (props) => {
-  const { children, className } = props
+export type CardBodyProps = {}
 
-  const { color, isLoading } = useCardCtx()
+export const CardBody = React.forwardRef<Ref, ReactDivProps & CardBodyProps>(
+  (props) => {
+    const { children, className, ...rest } = props
 
-  const {
-    theme: { CardStyles },
-  } = useThemeCtx()
+    const { color, isLoading } = useCardCtx()
 
-  const headerStyle = CardStyles.body
-  const cls = clsx(className, headerStyle.base)
-  const childrenCls = clsx(isLoading && headerStyle.loading.base)
+    const {
+      theme: { CardStyles },
+    } = useThemeCtx()
 
-  const spinnerCls = clsx(
-    headerStyle.loading.spinner,
-    headerStyle.loading[color],
-  )
+    const headerStyle = CardStyles.body
+    const cls = clsx(className, headerStyle.base)
+    const childrenCls = clsx(isLoading && headerStyle.loading.base)
 
-  return (
-    <div className={cls}>
-      <div className={childrenCls}>{children}</div>
-      {isLoading && <Spinner className={spinnerCls} />}
-    </div>
-  )
-}
+    const spinnerCls = clsx(
+      headerStyle.loading.spinner,
+      headerStyle.loading[color],
+    )
+
+    return (
+      <div className={cls} {...rest}>
+        <div className={childrenCls}>{children}</div>
+        {isLoading && <Spinner className={spinnerCls} />}
+      </div>
+    )
+  },
+)
+
+CardBody.displayName = 'CardBody'

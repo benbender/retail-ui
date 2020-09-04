@@ -1,18 +1,14 @@
 import { AcademicCapSolid } from '@retail-ui/heroicons'
-import { fireEvent, render } from '@retail-ui/test-utils'
+import { render } from '@retail-ui/test-utils'
 import * as React from 'react'
 
-import ButtonIconMeta, * as ButtonIcon from '../stories/ButtonIcon.stories'
+import * as ButtonIcon from '../stories/ButtonIcon.stories'
 
 describe('ButtonIcon', () => {
-  it('should fire callback onclick', () => {
-    const onClick = jest.fn()
-    const { getByTestId } = render(
-      <ButtonIcon.Simple icon={AcademicCapSolid} {...{ onClick }} />,
+  it('renders correctly', () => {
+    const { asFragment } = render(
+      <ButtonIcon.Simple icon={<AcademicCapSolid />} />,
     )
-
-    expect(onClick).not.toHaveBeenCalled()
-    fireEvent.click(getByTestId(ButtonIconMeta.title))
-    expect(onClick).toHaveBeenCalledTimes(1)
+    expect(asFragment()).toMatchSnapshot()
   })
 })

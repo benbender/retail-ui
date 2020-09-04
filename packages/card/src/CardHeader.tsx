@@ -4,15 +4,20 @@ import * as React from 'react'
 
 import { useCardCtx } from './CardContext'
 
-interface CardHeaderProps {
-  className?: string
+type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
+type Ref = HTMLDivElement
+
+export type CardHeaderProps = {
   title?: string
   subtitle?: string
   action?: React.ReactNode
 }
 
-export const CardHeader: React.FC<CardHeaderProps> = (props) => {
-  const { children, className, title, subtitle, action } = props
+export const CardHeader = React.forwardRef<
+  Ref,
+  ReactDivProps & CardHeaderProps
+>((props) => {
+  const { children, className, title, subtitle, action, ...rest } = props
 
   const { color } = useCardCtx()
 
@@ -45,9 +50,11 @@ export const CardHeader: React.FC<CardHeaderProps> = (props) => {
   }
 
   return (
-    <div className={cls}>
+    <div className={cls} {...rest}>
       {titleRender}
       {action}
     </div>
   )
-}
+})
+
+CardHeader.displayName = 'CardHeader'

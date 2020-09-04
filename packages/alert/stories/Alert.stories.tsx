@@ -10,13 +10,11 @@ const meta = {
 export default meta
 
 const Template = (args: AlertProps) => (
-  <Alert
-    title={`A alert that informs you of stuff`}
-    {...args}
-    data-testid={meta.title}
-  />
+  <Alert {...args} data-testid={meta.title} />
 )
 
 export const Simple = Template.bind({})
 // @ts-ignore
-Simple.args = {}
+Simple.args = {
+  content: `A alert that informs you of stuff`,
+}

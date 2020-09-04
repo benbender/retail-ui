@@ -3,7 +3,22 @@
 exports[`Card renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="bg-white border-gray-200 dark:bg-gray-800"
-  />
+    class="min-w-0 overflow-hidden rounded-lg transition-shadow duration-150 ease-in relative border border-solid text-base hover:shadow focus:shadow bg-white border-gray-200 dark:bg-gray-800"
+    data-testid="Retail-UI/Card"
+  >
+    <div
+      class="px-3 py-2 flex-auto max-h-full relative break-words"
+    >
+      <div
+        class=""
+      >
+        <p
+          class="text-sm text-gray-600 dark:text-gray-400"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+        </p>
+      </div>
+    </div>
+  </div>
 </DocumentFragment>
 `;

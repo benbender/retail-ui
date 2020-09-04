@@ -3,7 +3,7 @@ import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
-export interface ActionButtonsProps extends ButtonProps {
+export type ActionButtonsProps = ButtonProps & {
   cancelText?: string
   submitText?: string
   onClickCancel?: () => void

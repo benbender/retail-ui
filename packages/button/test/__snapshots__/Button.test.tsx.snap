@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<DocumentFragment>
+  <button
+    class="inline-flex items-center justify-center leading-5 align-bottom transition-colors duration-150 ease-in transform scale-100 border cursor-pointer focus:outline-none dark:focus:shadow-outline-gray active:scale-95 overflow-hidden no-underline select-none text-white bg-purple-600 border-transparent active:shadow-outline-purple focus:bg-purple-700 hover:bg-purple-700 py-2 px-4 text-base font-medium rounded-lg"
+    data-testid="Retail-UI/Button"
+  >
+    <span
+      class="opacity-100"
+    />
+  </button>
+</DocumentFragment>
+`;

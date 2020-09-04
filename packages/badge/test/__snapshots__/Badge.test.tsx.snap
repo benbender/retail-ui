@@ -4,6 +4,7 @@ exports[`Badge renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="text-center no-underline font-semibold relative overflow-hidden py-1 px-3 w-auto inline-flex items-center leading-none whitespace-no-wrap align-baseline text-xs rounded-full transition-colors duration-150 ease-in cursor-default active:shadow-outline active:outline-none focus:shadow-outline focus:outline-none bg-purple-600 text-white hover:bg-purple-700 focus:bg-purple-700"
+    data-testid="Retail-UI/Badge"
   />
 </DocumentFragment>
 `;

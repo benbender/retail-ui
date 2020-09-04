@@ -1,113 +1,113 @@
-import { IconProps } from '@retail-ui/icon'
 import { Spinner } from '@retail-ui/spinner'
 import { Theme, useThemeCtx } from '@retail-ui/theme'
+import { cloneElement } from '@retail-ui/utils'
 import clsx from 'clsx'
 import * as React from 'react'
 
-type ReactButtonProps = Pick<
+type Ref = HTMLButtonElement
+type ReactButtonProps = Omit<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
-  'type' | 'onClick'
+  'disabled'
 >
 
-export type ButtonColor = keyof Theme['ButtonStyles']['variant']['default']
-export type ButtonVariant = keyof Theme['ButtonStyles']['variant']
-export type ButtonSize = keyof Theme['ButtonStyles']['size']
-export type ButtonShape = keyof Theme['ButtonStyles']['shape']
+type ButtonColor = keyof Theme['ButtonStyles']['variant']['default']
+type ButtonVariant = keyof Theme['ButtonStyles']['variant']
+type ButtonSize = keyof Theme['ButtonStyles']['size']
+type ButtonShape = keyof Theme['ButtonStyles']['shape']
 
-export type ButtonProps = ReactButtonProps &
-  React.PropsWithChildren<{
-    size?: ButtonSize
-    variant?: ButtonVariant
-    shape?: ButtonShape
-    color?: ButtonColor
-    className?: string
-    spinnerClassName?: string
-    block?: boolean
-    iconLeft?: React.ComponentType<IconProps>
-    iconRight?: React.ComponentType<IconProps>
-    isLoading?: boolean
-    isDisabled?: boolean
-    isBlock?: boolean
-  }>
+export type ButtonProps = {
+  size?: ButtonSize
+  variant?: ButtonVariant
+  shape?: ButtonShape
+  color?: ButtonColor
+  spinnerClassName?: string
+  block?: boolean
+  iconLeft?: React.ReactNode
+  iconRight?: React.ReactNode
+  isLoading?: boolean
+  isDisabled?: boolean
+  isBlock?: boolean
+}
 
-type Ref = HTMLButtonElement
+export const Button = React.forwardRef<Ref, ReactButtonProps & ButtonProps>(
+  (props, ref) => {
+    const {
+      children,
+      className,
+      spinnerClassName,
+      isDisabled,
+      isBlock,
+      isLoading,
+      variant = 'default',
+      color = 'primary',
+      size = 'base',
+      iconLeft,
+      iconRight,
+      shape,
+      onClick,
+      ...rest
+    } = props
 
-export const Button = React.forwardRef<Ref, ButtonProps>((props, ref) => {
-  const {
-    children,
-    className,
-    spinnerClassName,
-    isDisabled,
-    isBlock,
-    isLoading,
-    variant = 'default',
-    color = 'primary',
-    size = 'base',
-    iconLeft,
-    iconRight,
-    shape,
-    onClick,
-    ...rest
-  } = props
+    const {
+      theme: { ButtonStyles },
+    } = useThemeCtx()
 
-  const {
-    theme: { ButtonStyles },
-  } = useThemeCtx()
+    const variantCls = ButtonStyles.variant
 
-  const variantCls = ButtonStyles.variant
+    const colorCls = variantCls[variant]
+    const sizeCls = ButtonStyles.size
+    const shapeCls = ButtonStyles.shape
 
-  const colorCls = variantCls[variant]
-  const sizeCls = ButtonStyles.size
-  const shapeCls = ButtonStyles.shape
+    const cls = clsx(
+      className,
+      ButtonStyles.base,
+      isDisabled && ButtonStyles.disabled,
+      isBlock && ButtonStyles.block,
+      isLoading && ButtonStyles.loading,
+      colorCls[color],
+      sizeCls[size],
+      shape && shapeCls[shape],
+    )
+    // Spinner
+    const spinnerSizeCls = ButtonStyles.spinner.size
+    const spinnerCls = clsx('absolute', spinnerSizeCls[size], spinnerClassName)
+    const isLoadingCls = isLoading ? 'opacity-0' : 'opacity-100'
 
-  const IconLeft = iconLeft
-  const IconRight = iconRight
+    /* iconCls */
+    const iconCls = ButtonStyles.icon
+    const iconSizeCls = iconCls['size']
 
-  const cls = clsx(
-    ButtonStyles.base,
-    isDisabled && ButtonStyles.disabled,
-    isBlock && ButtonStyles.block,
-    isLoading && ButtonStyles.loading,
-    colorCls[color],
-    sizeCls[size],
-    shape && shapeCls[shape],
-    className,
-  )
-  // Spinner
-  const spinnerSizeCls = ButtonStyles.spinner.size
-  const spinnerCls = clsx('absolute', spinnerSizeCls[size], spinnerClassName)
-  const isLoadingCls = isLoading ? 'opacity-0' : 'opacity-100'
+    const iconLeftCls = clsx(
+      children && iconCls.variant.left,
+      isLoadingCls,
+      iconSizeCls[size],
+    )
+    const iconRightCls = clsx(
+      children && iconCls.variant.right,
+      isLoadingCls,
+      iconSizeCls[size],
+    )
 
-  const iconCls = ButtonStyles.icon
-  const iconSizeCls = iconCls['size']
+    const iconLeftNode = cloneElement(iconLeft, { className: iconLeftCls })
+    const iconRightNode = cloneElement(iconRight, { className: iconRightCls })
 
-  const iconLeftCls = clsx(
-    children && iconCls.variant.left,
-    isLoadingCls,
-    iconSizeCls[size],
-  )
-  const iconRightCls = clsx(
-    children && iconCls.variant.right,
-    isLoadingCls,
-    iconSizeCls[size],
-  )
-
-  return (
-    <button
-      ref={ref}
-      className={cls}
-      disabled={isDisabled}
-      onClick={onClick}
-      {...rest}
-    >
-      {isLoading && <Spinner className={spinnerCls} />}
-      {IconLeft && <IconLeft className={iconLeftCls} />}
-      <span className={isLoading ? 'opacity-0' : 'opacity-100'}>
-        {children}
-      </span>
-      {IconRight && <IconRight className={iconRightCls} />}
-    </button>
-  )
-})
+    return (
+      <button
+        ref={ref}
+        className={cls}
+        disabled={isDisabled}
+        onClick={onClick}
+        {...rest}
+      >
+        {isLoading && <Spinner className={spinnerCls} />}
+        {iconLeftNode}
+        <span className={isLoading ? 'opacity-0' : 'opacity-100'}>
+          {children}
+        </span>
+        {iconRightNode}
+      </button>
+    )
+  },
+)
 
 Button.displayName = 'Button'

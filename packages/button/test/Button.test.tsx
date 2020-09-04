@@ -1,15 +1,11 @@
-import { fireEvent, render } from '@retail-ui/test-utils'
+import { render } from '@retail-ui/test-utils'
 import * as React from 'react'
 
-import ButtonMeta, * as Button from '../stories/Button.stories'
+import * as Button from '../stories/Button.stories'
 
 describe('Button', () => {
-  it('should fire callback onclick', () => {
-    const onClick = jest.fn()
-    const { getByTestId } = render(<Button.Basic {...{ onClick }} />)
-
-    expect(onClick).not.toHaveBeenCalled()
-    fireEvent.click(getByTestId(ButtonMeta.title))
-    expect(onClick).toHaveBeenCalledTimes(1)
+  it('renders correctly', () => {
+    const { asFragment } = render(<Button.Basic />)
+    expect(asFragment()).toMatchSnapshot()
   })
 })

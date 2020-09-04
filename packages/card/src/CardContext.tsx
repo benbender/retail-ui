@@ -1,6 +1,7 @@
 import { useCreateCtx } from '@retail-ui/hooks'
+import { Theme } from '@retail-ui/theme'
 
-import { CardColor } from '.'
+export type CardColor = keyof Theme['CardStyles']['color']
 
 export type CardValue = {
   color: CardColor

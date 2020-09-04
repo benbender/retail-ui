@@ -9,14 +9,15 @@ const meta = {
 
 export default meta
 
-const Template = (args: ButtonProps) => (
-  <Button {...args} data-testid={meta.title} />
-)
+const Template = (args: ButtonProps) => {
+  return <Button {...args} data-testid={meta.title} />
+}
 
 export const Basic = Template.bind({})
 // @ts-ignore
 Basic.args = {
   children: 'Button',
+  ref: React.createRef<HTMLButtonElement>(),
 }
 
 export const Block = Template.bind({})

@@ -43,7 +43,7 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/icon": "^0.2.3",
+    "@retail-ui/utils": "^0.3.0",
     "@retail-ui/theme": "^0.3.1"
   }
 }

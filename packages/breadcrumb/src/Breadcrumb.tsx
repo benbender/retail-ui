@@ -2,26 +2,27 @@ import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
-export type BreadcrumbProps = React.PropsWithChildren<{
-  className?: string
-}>
+type ReactUListProps = React.HTMLAttributes<HTMLUListElement>
 type Ref = HTMLUListElement
 
-export const Breadcrumb = React.forwardRef<Ref, BreadcrumbProps>(
-  (props, ref) => {
-    const { children, className } = props
-    const {
-      theme: { BreadcrumbStyles },
-    } = useThemeCtx()
+export type BreadcrumbProps = {}
 
-    const cls = clsx(className, BreadcrumbStyles.base)
+export const Breadcrumb = React.forwardRef<
+  Ref,
+  ReactUListProps & BreadcrumbProps
+>((props, ref) => {
+  const { children, className, ...rest } = props
+  const {
+    theme: { BreadcrumbStyles },
+  } = useThemeCtx()
 
-    return (
-      <ul ref={ref} className={cls}>
-        {children}
-      </ul>
-    )
-  },
-)
+  const cls = clsx(className, BreadcrumbStyles.base)
+
+  return (
+    <ul ref={ref} className={cls} {...rest}>
+      {children}
+    </ul>
+  )
+})
 
 Breadcrumb.displayName = 'Breadcrumb'

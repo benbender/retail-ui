@@ -4,6 +4,7 @@ exports[`Breadcrumb renders correctly 1`] = `
 <DocumentFragment>
   <ul
     class="flex flex-wrap py-1 px-3 list-none rounded relative whitespace-no-wrap mt-0 mb-0"
+    data-testid="Retail-UI/BreadcrumbItem"
   >
     <li
       class="text-gray-600 flex items-center mt-0 mb-0  text-base"

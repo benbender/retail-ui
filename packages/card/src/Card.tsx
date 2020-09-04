@@ -1,50 +1,52 @@
-import { Theme, useThemeCtx } from '@retail-ui/theme'
+import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
-import { CardProvider } from './CardContext'
+import { CardColor, CardProvider } from './CardContext'
 
-export type CardColor = keyof Theme['CardStyles']['color']
+type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
+type Ref = HTMLDivElement
 
-export type CardProps = React.PropsWithChildren<{
-  className?: string
+export type CardProps = {
   color?: CardColor
   isLoading?: boolean
   isStatic?: boolean
-}>
-type Ref = HTMLDivElement
+}
 
-export const Card = React.forwardRef<Ref, CardProps>((props, ref) => {
-  const {
-    children,
-    className,
-    color = 'default',
-    isLoading = false,
-    isStatic = false,
-  } = props
+export const Card = React.forwardRef<Ref, ReactDivProps & CardProps>(
+  (props, ref) => {
+    const {
+      children,
+      className,
+      color = 'default',
+      isLoading = false,
+      isStatic = false,
+      ...rest
+    } = props
 
-  const {
-    theme: { CardStyles },
-  } = useThemeCtx()
+    const {
+      theme: { CardStyles },
+    } = useThemeCtx()
 
-  const cls = clsx(
-    className,
-    CardStyles.base,
-    !isStatic && CardStyles.hov,
-    CardStyles.color[color],
-  )
+    const cls = clsx(
+      className,
+      CardStyles.base,
+      !isStatic && CardStyles.hov,
+      CardStyles.color[color],
+    )
 
-  const cardValue = React.useMemo(() => {
-    return { color, isLoading }
-  }, [color, isLoading])
+    const cardValue = React.useMemo(() => {
+      return { color, isLoading }
+    }, [color, isLoading])
 
-  return (
-    <CardProvider value={cardValue}>
-      <div ref={ref} className={cls}>
-        {children}
-      </div>
-    </CardProvider>
-  )
-})
+    return (
+      <CardProvider value={cardValue}>
+        <div ref={ref} className={cls} {...rest}>
+          {children}
+        </div>
+      </CardProvider>
+    )
+  },
+)
 
 Card.displayName = 'Card'

@@ -1,9 +1,12 @@
-import { IconProps } from '@retail-ui/icon'
 import { Theme, useThemeCtx } from '@retail-ui/theme'
+import { cloneElement } from '@retail-ui/utils'
 import clsx from 'clsx'
 import * as React from 'react'
 
-export type BreadcrumbItemSize = keyof Theme['BreadcrumbStyles']['item']['size']
+type ReactLIProps = React.HTMLAttributes<HTMLLIElement>
+type Ref = HTMLLIElement
+
+type BreadcrumbItemSize = keyof Theme['BreadcrumbStyles']['item']['size']
 
 export const BREADCRUMB_SEPARATOR_VARIANT = {
   default: '/',
@@ -11,66 +14,74 @@ export const BREADCRUMB_SEPARATOR_VARIANT = {
   arrowhead: '>',
   bullet: '.',
 }
-export type BreadcrumbItemProps = React.PropsWithChildren<{
+export type BreadcrumbItemProps = {
   separator?: keyof typeof BREADCRUMB_SEPARATOR_VARIANT
   onClick?: () => void
   isActive?: boolean
   size?: BreadcrumbItemSize
-  icon?: React.ElementType<IconProps>
-}>
-type Ref = HTMLLIElement
+  icon?: React.ReactNode
+}
+
 // TODO: add hover style for primary text
-export const BreadcrumbItem = React.forwardRef<Ref, BreadcrumbItemProps>(
-  (props, ref) => {
-    const {
-      children,
-      separator = 'default',
-      isActive = false,
-      size = 'base',
-      icon,
-    } = props
+export const BreadcrumbItem = React.forwardRef<
+  Ref,
+  ReactLIProps & BreadcrumbItemProps
+>((props, ref) => {
+  const {
+    children,
+    separator = 'default',
+    className,
+    isActive = false,
+    size = 'base',
+    icon,
+    ...rest
+  } = props
 
-    const {
-      theme: { BreadcrumbStyles },
-    } = useThemeCtx()
+  const {
+    theme: { BreadcrumbStyles },
+  } = useThemeCtx()
 
-    const itemCls = BreadcrumbStyles.item
+  const itemCls = BreadcrumbStyles.item
 
-    const sizeCls = itemCls.size
+  const sizeCls = itemCls.size
 
-    const cls = clsx(itemCls.base, isActive && itemCls.active, sizeCls[size])
+  const cls = clsx(
+    className,
+    itemCls.base,
+    isActive && itemCls.active,
+    sizeCls[size],
+  )
 
-    let linkToRender
-    if (icon) {
-      const Icon = icon
-      const iconSizeCls = itemCls.icon.size
-      const iconCls = clsx(itemCls.icon.base, iconSizeCls[size])
+  let linkToRender
+  if (icon) {
+    const iconSizeCls = itemCls.icon.size
+    const iconCls = clsx(itemCls.icon.base, iconSizeCls[size])
+    const iconNode = cloneElement(icon, { className: iconCls })
 
-      linkToRender = (
-        <span className="flex items-center">
-          <Icon className={iconCls} />
-          {children}
-        </span>
-      )
-    } else {
-      linkToRender = <span>{children}</span>
-    }
-
-    const separatorCls = clsx(BreadcrumbStyles.separator.base)
-
-    return (
-      <React.Fragment>
-        <li ref={ref} className={cls}>
-          {linkToRender}
-        </li>
-        {separator && (
-          <span className={separatorCls}>
-            {BREADCRUMB_SEPARATOR_VARIANT[separator]}
-          </span>
-        )}
-      </React.Fragment>
+    linkToRender = (
+      <span className="flex items-center">
+        {iconNode}
+        {children}
+      </span>
     )
-  },
-)
+  } else {
+    linkToRender = <span>{children}</span>
+  }
+
+  const separatorCls = clsx(BreadcrumbStyles.separator.base)
+
+  return (
+    <React.Fragment>
+      <li ref={ref} className={cls} {...rest}>
+        {linkToRender}
+      </li>
+      {separator && (
+        <span className={separatorCls}>
+          {BREADCRUMB_SEPARATOR_VARIANT[separator]}
+        </span>
+      )}
+    </React.Fragment>
+  )
+})
 
 BreadcrumbItem.displayName = 'BreadcrumbItem'

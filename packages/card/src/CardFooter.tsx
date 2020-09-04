@@ -4,13 +4,18 @@ import * as React from 'react'
 
 import { useCardCtx } from './CardContext'
 
-interface CardFooterProps {
-  className?: string
+type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
+type Ref = HTMLDivElement
+
+export type CardFooterProps = {
   isTransparent?: boolean
 }
 
-export const CardFooter: React.FC<CardFooterProps> = (props) => {
-  const { children, className, isTransparent } = props
+export const CardFooter = React.forwardRef<
+  Ref,
+  ReactDivProps & CardFooterProps
+>((props) => {
+  const { children, className, isTransparent, ...rest } = props
 
   const {
     theme: { CardStyles },
@@ -27,5 +32,11 @@ export const CardFooter: React.FC<CardFooterProps> = (props) => {
     isLoading && footerStyle.loading,
   )
 
-  return <div className={cls}>{children}</div>
-}
+  return (
+    <div className={cls} {...rest}>
+      {children}
+    </div>
+  )
+})
+
+CardFooter.displayName = 'CardFooter'

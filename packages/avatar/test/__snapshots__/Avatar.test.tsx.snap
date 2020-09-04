@@ -4,6 +4,7 @@ exports[`Avatar renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="relative rounded-full select-none text-center no-underline h-10 w-10 "
+    data-testid="Retail-UI/Avatar"
   >
     <span
       class="absolute rounded-full inset-0 font-bold uppercase flex items-center justify-center h-full w-full bg-purple-300 text-purple-600 no-underline text-base"
