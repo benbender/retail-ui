@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
+  >
+    <span
+      class="flex items-center col-span-3"
+    >
+      Showing 1-5 of 30
+    </span>
+    <span
+      class="col-span-2"
+    />
+    <span
+      class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end"
+    >
+      <nav
+        aria-label="navigation"
+      >
+        <ul
+          class="inline-flex items-center"
+        >
+          <li>
+            <button
+              aria-label="Previous"
+              class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
+              disabled=""
+            >
+              <svg
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button
+              class="px-3 py-1 text-white transition-colors duration-150 bg-purple-600 border border-r-0 border-purple-600 rounded-md focus:outline-none focus:shadow-outline-purple"
+            >
+              1
+            </button>
+          </li>
+          <li>
+            <button
+              class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
+            >
+              2
+            </button>
+          </li>
+          <li>
+            <button
+              class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
+            >
+              3
+            </button>
+          </li>
+          <li>
+            <button
+              class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
+            >
+              4
+            </button>
+          </li>
+          <li>
+            <button
+              class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
+            >
+              5
+            </button>
+          </li>
+          <li>
+            <button
+              class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple"
+            >
+              6
+            </button>
+          </li>
+          <li>
+            <button
+              aria-label="Next"
+              class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
+            >
+              <svg
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </span>
+  </div>
+</DocumentFragment>
+`;

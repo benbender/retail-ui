@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image renders correctly 1`] = `
+<DocumentFragment>
+  <img
+    alt="Woman paying for a purchase"
+    class="bg-gray-400 dark:bg-gray-700 w-full mx-auto"
+    src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80"
+    style="height: 300px;"
+  />
+</DocumentFragment>
+`;

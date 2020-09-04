@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch renders correctly 1`] = `
+<DocumentFragment>
+  <label
+    class="relative inline-block align-middle cursor-pointer select-none bg-transparent focus-within:shadow-outline"
+  >
+    <input
+      class="hidden"
+      data-testid="Retail-UI/Switch"
+      type="checkbox"
+    />
+    <div
+      class="w-12 h-6 bg-purple-600 dark:bg-gray-600 rounded-full shadow-inner"
+    />
+    <div
+      class="transition-all duration-300 ease-in-out absolute top-0 left-0 w-6 h-6 bg-white border-2 border-purple-600 rounded-full shadow"
+    />
+  </label>
+</DocumentFragment>
+`;

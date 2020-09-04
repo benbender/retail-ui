@@ -40,10 +40,8 @@
     "lint": "tsdx lint"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16",
+    "lodash": ">=4.17"
   },
-  "devDependencies": {
-    "lodash": "^4.17.20",
-    "@types/lodash": "^4.14.161"
-  }
+  "devDependencies": {}
 }

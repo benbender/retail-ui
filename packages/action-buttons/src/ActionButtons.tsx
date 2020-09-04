@@ -3,13 +3,18 @@ import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
+type ReactButtonProps = Omit<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  'disabled'
+>
+
 export type ActionButtonsProps = ButtonProps & {
   cancelText?: string
   submitText?: string
   onClickCancel?: () => void
   onClickSubmit?: () => void
-  submitProps?: ButtonProps
-  cancelProps?: ButtonProps
+  submitProps?: ReactButtonProps & ButtonProps
+  cancelProps?: ReactButtonProps & ButtonProps
 }
 
 export const ActionButtons: React.FC<ActionButtonsProps> = (props) => {

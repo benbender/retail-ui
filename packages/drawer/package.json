@@ -1,0 +1,54 @@
+{
+  "name": "@retail-ui/drawer",
+  "version": "0.3.0",
+  "description": "The Drawer component of @retail-ui",
+  "keywords": [
+    "react",
+    "components",
+    "Drawer",
+    "typescript",
+    "tsdx"
+  ],
+  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/drawer#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "main": "dist/index.js",
+  "module": "dist/drawer.esm.production.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "directory": "packages/drawer",
+    "type": "git",
+    "url": "git+https://github.com/sondh0127/retail-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sondh0127/retail-ui/issues"
+  },
+  "scripts": {
+    "start": "tsdx watch --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "react-focus-lock": "^2.4.1",
+    "@retail-ui/theme": "^0.3.1",
+    "@retail-ui/transition": "^0.3.0",
+    "@retail-ui/hooks": "^0.2.1",
+    "@retail-ui/action-buttons": "^0.3.2",
+    "@retail-ui/button-icon": "^0.3.1",
+    "@retail-ui/heroicons": "^0.2.4"
+  }
+}
