@@ -1,6 +1,7 @@
 // class="
 export const CardStyles = {
-  base: `min-w-0 overflow-hidden rounded-lg transition-shadow duration-150 ease-in inline-flex flex-col relative border border-solid text-base`,
+  //
+  base: `min-w-0 overflow-hidden rounded-lg transition-shadow duration-150 ease-in relative border border-solid text-base`,
   hov: 'hover:shadow focus:shadow',
   header: {
     base: `px-3 py-2 border-b flex justify-between items-center`,
@@ -21,7 +22,7 @@ export const CardStyles = {
   },
   // class="
   body: {
-    base: `px-3 py-2 flex-auto max-h-full relative`,
+    base: `px-3 py-2 flex-auto max-h-full relative break-words`,
     loading: {
       base: `opacity-25 pointer-events-none cursor-default`,
       spinner: `absolute inset-0 m-auto`,
