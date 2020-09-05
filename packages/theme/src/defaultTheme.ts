@@ -12,6 +12,7 @@ import { DialogStyles } from './styles/DialogStyles'
 import { DrawerStyles } from './styles/DrawerStyles'
 import { IconStyles } from './styles/IconStyles'
 import { ImageStyles } from './styles/ImageStyles'
+import { InputStyles } from './styles/InputStyles'
 import { SpinnerStyles } from './styles/SpinnerStyles'
 import { StatusStyles } from './styles/StatusStyles'
 
@@ -32,6 +33,7 @@ export const defaultTheme = {
   DrawerStyles,
   ImageStyles,
   StatusStyles,
+  InputStyles,
 }
 
 export type Theme = typeof defaultTheme
