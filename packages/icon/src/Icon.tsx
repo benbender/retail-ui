@@ -2,7 +2,7 @@ import { Theme, useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
-type ReactSVGProps = React.SVGProps<SVGSVGElement>
+export type ReactSVGProps = React.SVGProps<SVGSVGElement>
 export type SVGRef = SVGSVGElement
 
 type IconSize = keyof Theme['IconStyles']['size']

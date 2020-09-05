@@ -1,10 +1,10 @@
-import { Icon, IconProps, SVGRef } from '@retail-ui/icon'
+import { Icon, IconProps, ReactSVGProps, SVGRef } from '@retail-ui/icon'
 import React from 'react'
 
-export const CheckOutline = React.forwardRef<SVGRef, IconProps>(
+export const CheckOutline = React.forwardRef<SVGRef, ReactSVGProps & IconProps>(
   (props, ref) => {
     return (
-      <Icon ref={ref} {...props} viewBox="0 0 24 24">
+      <Icon {...props} ref={ref} viewBox="0 0 24 24">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"

@@ -19,6 +19,7 @@
   },
   "scripts": {
     "bootstrap": "yarn install --frozen-lockfile && yarn build:packages",
+    "clean:packages": "rm -rf packages/**/node_modules packages/**/dist",
     "build:packages": "lerna run build",
     "build:storybook": "yarn build:tailwind && build-storybook",
     "start": "lerna run start --stream --parallel",
@@ -29,8 +30,7 @@
     "test": "tsdx test",
     "test:changes": "tsdx test --changedSince master",
     "test:ci": "yarn test --ci --coverage --maxWorkers=2",
-    "test:watch": "tsdx test --watch",
-    "build:tailwind": "postcss styles/base.css -o styles/tailwind.css"
+    "test:watch": "tsdx test --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
