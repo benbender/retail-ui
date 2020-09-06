@@ -2855,11 +2855,6 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@retail-ui/check-box@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@retail-ui/check-box/-/check-box-0.4.0.tgz#24b1e1e133656d93ebe48b1c30aa8afe66041988"
-  integrity sha512-ZTssnWDsdTsLaLP96eWfwTxICwMeRDQy2ZlUgFx2/fc8dKd/ULT73jGbHuQgAxI2JgF6WPTDetHPaoYZaRNLtw==
-
 "@rollup/plugin-commonjs@^11.0.0":
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-11.1.0.tgz#60636c7a722f54b41e419e1709df05c7234557ef"
