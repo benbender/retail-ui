@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/sondh0127/retail-ui/compare/@retail-ui/icon@0.3.0...@retail-ui/icon@0.3.1) (2020-09-06)
+
+### Bug Fixes
+
+- **icon:** fix propstype cause build error ([a4bb4d1](https://github.com/sondh0127/retail-ui/commit/a4bb4d1d3eb22395ae68d354c84c3493e672dc93))
+
 # [0.3.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/icon@0.2.3...@retail-ui/icon@0.3.0) (2020-09-04)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/badge@0.4.0...@retail-ui/badge@0.5.0) (2020-09-06)
+
+### Features
+
+- **all:** add component: input, checkbox, radio, dropdown, ([9bb2072](https://github.com/sondh0127/retail-ui/commit/9bb20727be7df99d8fcbfe6dba2b8e225111eb91))
+
 # [0.4.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/badge@0.3.2...@retail-ui/badge@0.4.0) (2020-09-04)
 
 ### Bug Fixes

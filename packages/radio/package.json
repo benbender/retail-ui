@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/radio",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "The Radio component of @retail-ui",
   "keywords": [
     "react",
@@ -41,6 +41,5 @@
   },
   "peerDependencies": {
     "react": ">=16"
-  },
-  "devDependencies": {}
+  }
 }

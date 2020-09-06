@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/sondh0127/retail-ui/compare/@retail-ui/button-icon@0.4.0...@retail-ui/button-icon@0.4.1) (2020-09-06)
+
+**Note:** Version bump only for package @retail-ui/button-icon
+
 # [0.4.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/button-icon@0.3.1...@retail-ui/button-icon@0.4.0) (2020-09-04)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/sondh0127/retail-ui/compare/@retail-ui/heroicons@0.2.5...@retail-ui/heroicons@0.2.6) (2020-09-06)
+
+### Bug Fixes
+
+- **icon:** fix propstype cause build error ([a4bb4d1](https://github.com/sondh0127/retail-ui/commit/a4bb4d1d3eb22395ae68d354c84c3493e672dc93))
+
 ## [0.2.5](https://github.com/sondh0127/retail-ui/compare/@retail-ui/heroicons@0.2.4...@retail-ui/heroicons@0.2.5) (2020-09-04)
 
 **Note:** Version bump only for package @retail-ui/heroicons

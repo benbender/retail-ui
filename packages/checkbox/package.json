@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/checkbox",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "The CheckBox component of @retail-ui",
   "keywords": [
     "react",
@@ -41,6 +41,5 @@
   },
   "peerDependencies": {
     "react": ">=16"
-  },
-  "devDependencies": {}
+  }
 }

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/sondh0127/retail-ui/compare/@retail-ui/card@0.3.0...@retail-ui/card@0.3.1) (2020-09-06)
+
+**Note:** Version bump only for package @retail-ui/card
+
 # [0.3.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/card@0.2.1...@retail-ui/card@0.3.0) (2020-09-04)
 
 ### Bug Fixes
