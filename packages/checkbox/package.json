@@ -1,22 +1,22 @@
 {
-  "name": "@retail-ui/input",
-  "version": "0.3.0",
-  "description": "The Input component of @retail-ui",
+  "name": "@retail-ui/checkbox",
+  "version": "0.4.0",
+  "description": "The CheckBox component of @retail-ui",
   "keywords": [
     "react",
     "components",
-    "Input",
+    "CheckBox",
     "typescript",
     "tsdx"
   ],
-  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/input#readme",
+  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/checkbox#readme",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "main": "dist/index.js",
-  "module": "dist/input.esm.production.js",
+  "module": "dist/checkbox.esm.production.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
@@ -26,7 +26,7 @@
     "node": ">=10"
   },
   "repository": {
-    "directory": "packages/input",
+    "directory": "packages/checkbox",
     "type": "git",
     "url": "git+https://github.com/sondh0127/retail-ui.git"
   },
@@ -42,7 +42,5 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "devDependencies": {
-    "@retail-ui/hooks": "^0.3.0"
-  }
+  "devDependencies": {}
 }

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio renders correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="inline-flex items-center text-gray-600 dark:text-gray-400"
+    >
+      <input
+        class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none dark:border-gray-600 dark:bg-gray-700 focus:shadow-outline-purple dark:focus:border-gray-600 dark:focus:shadow-outline-gray"
+        data-testid="Retail-UI/Radio"
+        type="radio"
+        value="busines"
+      />
+      <span
+        class="ml-2 undefined"
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;

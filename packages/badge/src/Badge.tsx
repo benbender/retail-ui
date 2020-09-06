@@ -1,14 +1,15 @@
 import { ButtonIcon, ButtonIconProps } from '@retail-ui/button-icon'
 import { XSolid } from '@retail-ui/heroicons'
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
+
+import { BadgeStyles } from './styles'
 
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
 
-type BadgeVariant = keyof Theme['BadgeStyles']['variant']
-type BadgeColor = keyof Theme['BadgeStyles']['variant']['solid']
+type BadgeVariant = keyof typeof BadgeStyles['variant']
+type BadgeColor = keyof typeof BadgeStyles['variant']['solid']
 
 export type BadgeProps = {
   variant?: BadgeVariant
@@ -29,10 +30,6 @@ export const Badge = React.forwardRef<Ref, ReactDivProps & BadgeProps>(
       onClose,
       ...rest
     } = props
-
-    const {
-      theme: { BadgeStyles },
-    } = useThemeCtx()
 
     const variantCls = BadgeStyles.variant
     const colorCls = variantCls[variant]

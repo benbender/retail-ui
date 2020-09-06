@@ -1,22 +1,22 @@
 {
-  "name": "@retail-ui/input",
+  "name": "@retail-ui/dropdown",
   "version": "0.3.0",
-  "description": "The Input component of @retail-ui",
+  "description": "The Dropdown component of @retail-ui",
   "keywords": [
     "react",
     "components",
-    "Input",
+    "Dropdown",
     "typescript",
     "tsdx"
   ],
-  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/input#readme",
+  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/dropdown#readme",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "main": "dist/index.js",
-  "module": "dist/input.esm.production.js",
+  "module": "dist/dropdown.esm.production.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
@@ -26,7 +26,7 @@
     "node": ">=10"
   },
   "repository": {
-    "directory": "packages/input",
+    "directory": "packages/dropdown",
     "type": "git",
     "url": "git+https://github.com/sondh0127/retail-ui.git"
   },

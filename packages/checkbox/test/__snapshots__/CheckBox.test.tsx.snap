@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBox renders correctly 1`] = `
+<DocumentFragment>
+  <label
+    class="flex items-center text-gray-600 dark:text-gray-400 base disabled label"
+  >
+    <input
+      class="text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray dark:border-gray-600 dark:bg-gray-700 dark:focus:border-gray-600"
+      data-testid="Retail-UI/CheckBox"
+      type="checkbox"
+    />
+    <span
+      class="ml-2 undefined"
+    >
+      CheckBox
+    </span>
+  </label>
+</DocumentFragment>
+`;

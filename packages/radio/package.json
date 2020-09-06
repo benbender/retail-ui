@@ -1,22 +1,22 @@
 {
-  "name": "@retail-ui/check-box",
-  "version": "0.4.0",
-  "description": "The CheckBox component of @retail-ui",
+  "name": "@retail-ui/radio",
+  "version": "0.3.0",
+  "description": "The Radio component of @retail-ui",
   "keywords": [
     "react",
     "components",
-    "CheckBox",
+    "Radio",
     "typescript",
     "tsdx"
   ],
-  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/check-box#readme",
+  "homepage": "https://github.com/sondh0127/retail-ui/tree/master/packages/radio#readme",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "main": "dist/index.js",
-  "module": "dist/check-box.esm.production.js",
+  "module": "dist/radio.esm.production.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
@@ -26,7 +26,7 @@
     "node": ">=10"
   },
   "repository": {
-    "directory": "packages/check-box",
+    "directory": "packages/radio",
     "type": "git",
     "url": "git+https://github.com/sondh0127/retail-ui.git"
   },
@@ -42,7 +42,5 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "devDependencies": {
-    "@retail-ui/theme": "^0.4.0"
-  }
+  "devDependencies": {}
 }

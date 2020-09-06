@@ -289,6 +289,7 @@ export function resolveConfig(tailwindConfig: object): object {
   } else {
     purge = tailwindConfig.purge
   }
+
   return deepMerge({ ...tailwindConfig, purge }, retailUIConfig, {
     arrayMerge: arrayMergeFn,
   })

@@ -12,8 +12,8 @@ export default meta
 
 const Template: Story<CheckBoxProps> = (args) => (
   <CheckBox
+    label="CheckBox"
     data-testid={meta.title}
-    isChecked={true}
     {...args}
     onChange={() => {}}
   />

@@ -1,8 +1,8 @@
-# Check-box
+# Radio
 
 ## Installation
 
-`yarn add -D @retail-ui/check-box`
+`yarn add -D @retail-ui/radio`
 
 ## Usage
 
@@ -11,5 +11,5 @@ Coming soon...
 Following that, usage should be as simple as:
 
 ```tsx
-import { CheckBox } from '@retail-ui/check-box'
+import { Radio } from '@retail-ui/radio'
 ```

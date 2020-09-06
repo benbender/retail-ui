@@ -1,7 +1,7 @@
 // class="
 export const InputStyles = {
   base: `
-  @apply block w-full mt-1 text-sm leading-5 text-black focus:outline-none dark:text-gray-300 form-input focus:border-purple-400 dark:border-gray-600 dark:bg-gray-700 focus:shadow-outline-purple dark:focus:border-gray-600 dark:focus:shadow-outline-gray`,
+  block w-full text-sm leading-5 text-black focus:outline-none dark:text-gray-300 form-input focus:border-purple-400 dark:border-gray-600 dark:bg-gray-700 focus:shadow-outline-purple dark:focus:border-gray-600 dark:focus:shadow-outline-gray`,
 
   disabled: `bg-gray-300 opacity-50 cursor-not-allowed dark:bg-gray-800`,
   invalid: `border-red-600 dark:bg-gray-700 focus:border-red-400 dark:focus:border-red-400 focus:shadow-outline-red dark:focus:shadow-outline-red`,
