@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/sondh0127/retail-ui/compare/@retail-ui/core@0.6.0...@retail-ui/core@0.6.1) (2020-09-06)
+
+### Bug Fixes
+
+- **core:** fix missing npm deps ([8abf1db](https://github.com/sondh0127/retail-ui/commit/8abf1db520fe9336dc907e213732647c0f8c07c3))
+
 # [0.6.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/core@0.5.0...@retail-ui/core@0.6.0) (2020-09-06)
 
 ### Features
