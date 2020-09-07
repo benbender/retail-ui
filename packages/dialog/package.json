@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/dialog",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "The Dialog component of @retail-ui",
   "keywords": [
     "react",
@@ -45,7 +45,7 @@
   "devDependencies": {
     "@retail-ui/action-buttons": "^0.5.0",
     "@retail-ui/heroicons": "^0.2.7",
-    "@retail-ui/hooks": "^0.3.0",
+    "@retail-ui/hooks": "^0.3.1",
     "@retail-ui/transition": "^0.4.1"
   },
   "dependencies": {

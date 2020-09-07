@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.4](https://github.com/sondh0127/retail-ui/compare/@retail-ui/core@0.6.3...@retail-ui/core@0.6.4) (2020-09-07)
+
+**Note:** Version bump only for package @retail-ui/core
+
 ## [0.6.3](https://github.com/sondh0127/retail-ui/compare/@retail-ui/core@0.6.2...@retail-ui/core@0.6.3) (2020-09-07)
 
 **Note:** Version bump only for package @retail-ui/core

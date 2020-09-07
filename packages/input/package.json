@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/input",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "The Input component of @retail-ui",
   "keywords": [
     "react",
@@ -43,6 +43,6 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/hooks": "^0.3.0"
+    "@retail-ui/hooks": "^0.3.1"
   }
 }

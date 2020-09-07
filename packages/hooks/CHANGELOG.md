@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/sondh0127/retail-ui/compare/@retail-ui/hooks@0.3.0...@retail-ui/hooks@0.3.1) (2020-09-07)
+
+### Bug Fixes
+
+- **deps:** fix deps react-use ([724699b](https://github.com/sondh0127/retail-ui/commit/724699bba248be21f2be5404e150dd9ea8dc92a1))
+
 # [0.3.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/hooks@0.2.1...@retail-ui/hooks@0.3.0) (2020-09-04)
 
 ### Features
