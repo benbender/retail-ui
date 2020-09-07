@@ -1,6 +1,7 @@
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
+
+import { DrawerStyles } from './styles'
 
 interface DrawerBodyProps {
   className?: string
@@ -8,9 +9,7 @@ interface DrawerBodyProps {
 
 export const DrawerBody: React.FC<DrawerBodyProps> = (props) => {
   const { children, className } = props
-  const {
-    theme: { DrawerStyles },
-  } = useThemeCtx()
+
   const headerStyles = DrawerStyles.body
 
   const cls = clsx(className, headerStyles)

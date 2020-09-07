@@ -1,4 +1,4 @@
-// import clsx from 'clsx'
+import clsx from 'clsx'
 import * as React from 'react'
 
 import {
@@ -7,6 +7,7 @@ import {
   PageButton,
   PrevNavigationButton,
 } from './PaginationButtons'
+import { PaginationStyles } from './styles'
 
 type ReactDivProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'>
 type Ref = HTMLDivElement
@@ -14,7 +15,7 @@ type Ref = HTMLDivElement
 export type PaginationProps = {
   totalResults: number
   resultsPerPage: number
-  label: string
+  label?: string
   onChange?: (activePage: number) => void
 }
 
@@ -22,7 +23,14 @@ export const Pagination = React.forwardRef<
   Ref,
   ReactDivProps & PaginationProps
 >((props, ref) => {
-  const { totalResults, resultsPerPage, onChange } = props
+  const {
+    className,
+    totalResults,
+    resultsPerPage,
+    label,
+    onChange,
+    ...rest
+  } = props
 
   const [pages, setPages] = React.useState<(number | string)[]>([])
   const [activePage, setActivePage] = React.useState(1)
@@ -32,11 +40,11 @@ export const Pagination = React.forwardRef<
   const LAST_PAGE = TOTAL_PAGES
   const MAX_VISIBLE_PAGES = 7
 
-  function handlePreviousClick() {
+  const handlePreviousClick = () => {
     setActivePage(activePage - 1)
   }
 
-  function handleNextClick() {
+  const handleNextClick = () => {
     setActivePage(activePage + 1)
   }
 
@@ -92,18 +100,24 @@ export const Pagination = React.forwardRef<
     }
   }, [activePage])
 
+  const wrapperCls = clsx(className, PaginationStyles.wrapper)
+  const cls = clsx(className, PaginationStyles.base)
+  const labelCls = clsx(PaginationStyles.label)
+
   return (
-    <div
-      ref={ref}
-      className="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
-    >
-      <span className="flex items-center col-span-3">
-        Showing {activePage * resultsPerPage - resultsPerPage + 1}-
-        {Math.min(activePage * resultsPerPage, totalResults)} of {totalResults}
+    <div ref={ref} className={wrapperCls} {...rest}>
+      <span className={labelCls}>
+        {label ?? (
+          <React.Fragment>
+            Showing {activePage * resultsPerPage - resultsPerPage + 1}-
+            {Math.min(activePage * resultsPerPage, totalResults)} of{' '}
+            {totalResults}
+          </React.Fragment>
+        )}
       </span>
       <span className="col-span-2"></span>
       {/* <!-- Pagination --> */}
-      <span className="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
+      <span className={cls}>
         <nav aria-label="navigation">
           <ul className="inline-flex items-center">
             <li>

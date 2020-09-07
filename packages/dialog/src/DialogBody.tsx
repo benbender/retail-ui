@@ -1,6 +1,7 @@
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
+
+import { DialogStyles } from './styles'
 
 interface DialogBodyProps {
   className?: string
@@ -8,9 +9,6 @@ interface DialogBodyProps {
 
 export const DialogBody: React.FC<DialogBodyProps> = (props) => {
   const { children, className, ...rest } = props
-  const {
-    theme: { DialogStyles },
-  } = useThemeCtx()
 
   const bodyStyles = DialogStyles.body
 

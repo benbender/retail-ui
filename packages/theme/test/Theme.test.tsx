@@ -1,20 +1,20 @@
 import { render, screen } from '@retail-ui/test-utils'
 import * as React from 'react'
 
-import { defaultTheme, ThemeProvider, useThemeCtx } from '../src'
+import { ThemeProvider, useThemeCtx } from '../src'
 
 describe('defaultTheme', () => {
   it('should return default theme value', () => {
     const ThemeConsumer: React.FC = () => {
       const { theme } = useThemeCtx()
-      return <div>block: {theme.ButtonStyles.block}</div>
+      return <div>theme: {theme}</div>
     }
     render(
-      <ThemeProvider value={{ theme: defaultTheme }}>
+      <ThemeProvider>
         <ThemeConsumer />
       </ThemeProvider>,
     )
 
-    expect(screen.getByText(/^block:/).textContent).toBe('block: w-full')
+    expect(screen.getByText(/^theme:/).textContent).toBe('theme: light')
   })
 })

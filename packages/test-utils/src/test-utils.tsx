@@ -1,4 +1,4 @@
-import { defaultTheme, ThemeProvider } from '@retail-ui/theme'
+import { ThemeProvider } from '@retail-ui/theme'
 import {
   render as RtlRender,
   RenderOptions,
@@ -52,7 +52,7 @@ export const render = (
   { wrapper: Wrapper = ChildrenPassthrough, ...options }: TestOptions = {},
 ): RenderResult => {
   return RtlRender(
-    <ThemeProvider value={{ theme: defaultTheme }}>
+    <ThemeProvider>
       <Wrapper>{ui}</Wrapper>
     </ThemeProvider>,
     options,

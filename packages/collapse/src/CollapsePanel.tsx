@@ -1,10 +1,10 @@
 import { Card, CardBody } from '@retail-ui/card'
 import { ChevronDownOutline } from '@retail-ui/heroicons'
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
 import { useCollapseCtx } from './CollapseContext'
+import { CollapseStyles } from './styles'
 
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
@@ -27,10 +27,6 @@ export const CollapsePanel = React.forwardRef<
   ReactDivProps & CollapsePanelProps
 >((props) => {
   const { children, className, buttonNode, title, index, ...rest } = props
-
-  const {
-    theme: { CollapseStyles },
-  } = useThemeCtx()
 
   const { collapses, setCollapses } = useCollapseCtx()
 

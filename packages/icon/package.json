@@ -42,8 +42,6 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "devDependencies": {
-    "@retail-ui/theme": "^0.5.0"
-  },
+  "devDependencies": {},
   "gitHead": "929e4cfdd6ed4fd576af406c5281e9942717524f"
 }

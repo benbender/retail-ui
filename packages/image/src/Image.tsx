@@ -1,9 +1,10 @@
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
-export type ImageFit = keyof Theme['ImageStyles']['fit']
-export type ImageFitPosition = keyof Theme['ImageStyles']['fitPosition']
+import { ImageStyles } from './styles'
+
+export type ImageFit = keyof typeof ImageStyles['fit']
+export type ImageFitPosition = keyof typeof ImageStyles['fitPosition']
 
 type ReactDivProps = React.HTMLAttributes<HTMLImageElement>
 type Ref = HTMLImageElement
@@ -35,10 +36,6 @@ export const Image = React.forwardRef<Ref, ReactDivProps & ImageProps>(
       width,
       height,
     } = props
-
-    const {
-      theme: { ImageStyles },
-    } = useThemeCtx()
 
     const cls = clsx(
       className,

@@ -1,12 +1,13 @@
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
+
+import { IconStyles } from './styles'
 
 export type ReactSVGProps = React.SVGProps<SVGSVGElement>
 export type SVGRef = SVGSVGElement
 
-type IconSize = keyof Theme['IconStyles']['size']
-type IconColor = keyof Theme['IconStyles']['color']
+type IconSize = keyof typeof IconStyles['size']
+type IconColor = keyof typeof IconStyles['color']
 
 export type IconProps = {
   size?: IconSize
@@ -26,10 +27,8 @@ export const Icon = React.forwardRef<SVGRef, ReactSVGProps & IconProps>(
       ...rest
     } = props
 
-    const { theme } = useThemeCtx()
-
-    const sizeCls = theme.IconStyles.size
-    const colorCls = theme.IconStyles.color
+    const sizeCls = IconStyles.size
+    const colorCls = IconStyles.color
 
     const cls = clsx(
       sizeCls[size],

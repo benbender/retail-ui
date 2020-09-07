@@ -1,9 +1,9 @@
 import { ActionButtons } from '@retail-ui/action-buttons'
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
 import { useDialogCtx } from './DialogContext'
+import { DialogStyles } from './styles'
 
 interface DialogFooterProps {
   className?: string
@@ -11,10 +11,6 @@ interface DialogFooterProps {
 
 export const DialogFooter: React.FC<DialogFooterProps> = (props) => {
   const { className, ...rest } = props
-
-  const {
-    theme: { DialogStyles },
-  } = useThemeCtx()
 
   const { onClose, onSubmit } = useDialogCtx()
 

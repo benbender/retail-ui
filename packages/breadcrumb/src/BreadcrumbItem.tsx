@@ -1,12 +1,13 @@
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import { cloneElement } from '@retail-ui/utils'
 import clsx from 'clsx'
 import * as React from 'react'
 
+import { BreadcrumbStyles } from './styles'
+
 type ReactLIProps = React.HTMLAttributes<HTMLLIElement>
 type Ref = HTMLLIElement
 
-type BreadcrumbItemSize = keyof Theme['BreadcrumbStyles']['item']['size']
+type BreadcrumbItemSize = keyof typeof BreadcrumbStyles['item']['size']
 
 export const BREADCRUMB_SEPARATOR_VARIANT = {
   default: '/',
@@ -36,10 +37,6 @@ export const BreadcrumbItem = React.forwardRef<
     icon,
     ...rest
   } = props
-
-  const {
-    theme: { BreadcrumbStyles },
-  } = useThemeCtx()
 
   const itemCls = BreadcrumbStyles.item
 

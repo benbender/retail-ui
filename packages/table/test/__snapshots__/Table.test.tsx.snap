@@ -106,9 +106,7 @@ exports[`Table renders correctly 1`] = `
     >
       <span
         class="flex items-center col-span-3"
-      >
-        Showing 1-50 of 50
-      </span>
+      />
       <span
         class="col-span-2"
       />

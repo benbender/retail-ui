@@ -1,9 +1,9 @@
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import { constant } from 'lodash'
 import * as React from 'react'
 
 import { CollapseProvider } from './CollapseContext'
+import { CollapseStyles } from './styles'
 
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
@@ -15,10 +15,6 @@ export type CollapseProps = {
 export const Collapse = React.forwardRef<Ref, ReactDivProps & CollapseProps>(
   (props, ref) => {
     const { children, hasBorder, className, ...rest } = props
-
-    const {
-      theme: { CollapseStyles },
-    } = useThemeCtx()
 
     const [collapses, setCollapses] = React.useState([
       ...[...Array(React.Children.count(children))].map(constant(false)),

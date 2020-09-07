@@ -20,5 +20,3 @@ export const <%= h.changeCase.pascal(name) %> = React.forwardRef<Ref, ReactDivPr
 })
 
 <%= h.changeCase.pascal(name) %>.displayName = '<%= h.changeCase.pascal(name) %>'
-
-export default <%= h.changeCase.pascal(name) %>

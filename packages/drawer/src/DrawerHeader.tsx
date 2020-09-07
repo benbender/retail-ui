@@ -1,10 +1,10 @@
 import { ButtonIcon } from '@retail-ui/button-icon'
 import { XSolid } from '@retail-ui/heroicons'
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
 import { useDrawerCtx } from './DrawerContext'
+import { DrawerStyles } from './styles'
 
 interface DrawerHeaderProps {
   className?: string
@@ -12,9 +12,7 @@ interface DrawerHeaderProps {
 export const DrawerHeader: React.FC<DrawerHeaderProps> = (props) => {
   const { children, className } = props
   const { onClose } = useDrawerCtx()
-  const {
-    theme: { DrawerStyles },
-  } = useThemeCtx()
+
   const headerStyles = DrawerStyles.header
 
   const cls = clsx(className, headerStyles)

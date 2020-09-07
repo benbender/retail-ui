@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ThemeProvider, defaultTheme } from '@retail-ui/theme'
+import { ThemeProvider } from '@retail-ui/theme'
 import '../styles/tailwind.css'
 
 export const parameters = {
@@ -8,7 +8,7 @@ export const parameters = {
 
 const ThemeWrapper = (Story) => {
   return (
-    <ThemeProvider value={{ theme: defaultTheme }}>
+    <ThemeProvider>
       <Story />
     </ThemeProvider>
   )

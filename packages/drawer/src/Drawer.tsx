@@ -1,5 +1,4 @@
 import { useClickAwayOrEsc, useMountedState } from '@retail-ui/hooks'
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import { Transition } from '@retail-ui/transition'
 import clsx from 'clsx'
 import * as React from 'react'
@@ -7,12 +6,13 @@ import { createPortal } from 'react-dom'
 import FocusLock from 'react-focus-lock'
 
 import { DrawerProvider } from './DrawerContext'
+import { DrawerStyles } from './styles'
 
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
 
-type DrawerSize = keyof Theme['DrawerStyles']['size']
-type DrawerPosition = keyof Theme['DrawerStyles']['position']
+type DrawerSize = keyof typeof DrawerStyles['size']
+type DrawerPosition = keyof typeof DrawerStyles['position']
 
 export type DrawerProps = {
   isOpen: boolean
@@ -33,10 +33,6 @@ export const Drawer = React.forwardRef<Ref, ReactDivProps & DrawerProps>(
       position = 'left',
       ...rest
     } = props
-
-    const {
-      theme: { DrawerStyles },
-    } = useThemeCtx()
 
     const contentRef = useClickAwayOrEsc(onClose)
     const isMounted = useMountedState()

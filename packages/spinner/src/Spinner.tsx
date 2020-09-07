@@ -1,12 +1,13 @@
 import { Icon, IconProps } from '@retail-ui/icon'
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import React from 'react'
+
+import { SpinnerStyles } from './styles'
 
 type ReactSVGProps = React.SVGProps<SVGSVGElement>
 type SVGRef = SVGSVGElement
 
-type SpinnerSize = keyof Theme['SpinnerStyles']['size']
+type SpinnerSize = keyof typeof SpinnerStyles['size']
 
 export type SpinnerProps = IconProps & {
   size?: SpinnerSize
@@ -15,11 +16,10 @@ export type SpinnerProps = IconProps & {
 export const Spinner = React.forwardRef<SVGRef, ReactSVGProps & SpinnerProps>(
   (props, ref) => {
     const { className, size = 'base' } = props
-    const { theme } = useThemeCtx()
 
-    const sizeCls = theme.SpinnerStyles.size[size]
+    const sizeCls = SpinnerStyles.size[size]
 
-    const cls = clsx(theme.SpinnerStyles.base, sizeCls, className)
+    const cls = clsx(SpinnerStyles.base, sizeCls, className)
 
     return (
       <Icon

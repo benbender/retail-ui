@@ -16,7 +16,6 @@ const Template = (args: PaginationProps) => (
     onChange={() => {}}
     totalResults={30}
     resultsPerPage={5}
-    label="label"
   />
 )
 

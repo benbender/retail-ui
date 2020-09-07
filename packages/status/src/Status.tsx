@@ -1,12 +1,13 @@
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
+
+import { StatusStyles } from './styles'
 
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
 
-type StatusPosition = keyof Theme['StatusStyles']['position']
-type StatusColor = keyof Theme['StatusStyles']['color']
+type StatusPosition = keyof typeof StatusStyles['position']
+type StatusColor = keyof typeof StatusStyles['color']
 
 export type StatusProps = {
   text?: React.ReactNode
@@ -29,10 +30,6 @@ export const Status = React.forwardRef<Ref, ReactDivProps & StatusProps>(
       color = 'busy',
       ...rest
     } = props
-
-    const {
-      theme: { StatusStyles },
-    } = useThemeCtx()
 
     let statusToRender
     const cls = clsx(className, StatusStyles.base)

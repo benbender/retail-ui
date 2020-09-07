@@ -1,6 +1,7 @@
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
+
+import { AvatarStyles } from './styles'
 
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
@@ -13,9 +14,6 @@ export const AvatarGroup = React.forwardRef<
   Ref,
   ReactDivProps & AvatarGroupProps
 >((props, ref) => {
-  const {
-    theme: { AvatarStyles },
-  } = useThemeCtx()
   const { children, ...rest } = props
   const cls = clsx(AvatarStyles.group.base)
   return (

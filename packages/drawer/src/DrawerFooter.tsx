@@ -1,9 +1,9 @@
 import { ActionButtons } from '@retail-ui/action-buttons'
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
 import { useDrawerCtx } from './DrawerContext'
+import { DrawerStyles } from './styles'
 
 interface DrawerFooterProps {
   className?: string
@@ -11,9 +11,7 @@ interface DrawerFooterProps {
 
 export const DrawerFooter: React.FC<DrawerFooterProps> = (props) => {
   const { className } = props
-  const {
-    theme: { DrawerStyles },
-  } = useThemeCtx()
+
   const { onClose, onSubmit } = useDrawerCtx()
 
   const footerStyles = DrawerStyles.footer

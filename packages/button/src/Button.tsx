@@ -1,8 +1,9 @@
 import { Spinner } from '@retail-ui/spinner'
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import { cloneElement } from '@retail-ui/utils'
 import clsx from 'clsx'
 import * as React from 'react'
+
+import { ButtonStyles } from './styles'
 
 type Ref = HTMLButtonElement
 type ReactButtonProps = Omit<
@@ -10,10 +11,10 @@ type ReactButtonProps = Omit<
   'disabled'
 >
 
-type ButtonColor = keyof Theme['ButtonStyles']['variant']['default']
-type ButtonVariant = keyof Theme['ButtonStyles']['variant']
-type ButtonSize = keyof Theme['ButtonStyles']['size']
-type ButtonShape = keyof Theme['ButtonStyles']['shape']
+type ButtonColor = keyof typeof ButtonStyles['variant']['default']
+type ButtonVariant = keyof typeof ButtonStyles['variant']
+type ButtonSize = keyof typeof ButtonStyles['size']
+type ButtonShape = keyof typeof ButtonStyles['shape']
 
 export type ButtonProps = {
   size?: ButtonSize
@@ -47,10 +48,6 @@ export const Button = React.forwardRef<Ref, ReactButtonProps & ButtonProps>(
       onClick,
       ...rest
     } = props
-
-    const {
-      theme: { ButtonStyles },
-    } = useThemeCtx()
 
     const variantCls = ButtonStyles.variant
 

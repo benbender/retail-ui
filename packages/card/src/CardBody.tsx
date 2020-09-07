@@ -1,9 +1,9 @@
 import { Spinner } from '@retail-ui/spinner'
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
 import { useCardCtx } from './CardContext'
+import { CardStyles } from './styles'
 
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
@@ -15,10 +15,6 @@ export const CardBody = React.forwardRef<Ref, ReactDivProps & CardBodyProps>(
     const { children, className, ...rest } = props
 
     const { color, isLoading } = useCardCtx()
-
-    const {
-      theme: { CardStyles },
-    } = useThemeCtx()
 
     const headerStyle = CardStyles.body
     const cls = clsx(className, headerStyle.base)

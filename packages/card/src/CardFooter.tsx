@@ -1,8 +1,8 @@
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
 
 import { useCardCtx } from './CardContext'
+import { CardStyles } from './styles'
 
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
@@ -16,10 +16,6 @@ export const CardFooter = React.forwardRef<
   ReactDivProps & CardFooterProps
 >((props) => {
   const { children, className, isTransparent, ...rest } = props
-
-  const {
-    theme: { CardStyles },
-  } = useThemeCtx()
 
   const { color, isLoading } = useCardCtx()
 

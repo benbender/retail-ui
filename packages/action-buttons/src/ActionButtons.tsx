@@ -1,7 +1,8 @@
 import { Button, ButtonProps } from '@retail-ui/button'
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
+
+import { ActionButtonsStyles } from './styles'
 
 type ReactButtonProps = Omit<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -31,11 +32,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = (props) => {
     size = 'sm',
     ...rest
   } = props
-  const { theme } = useThemeCtx()
 
-  const actionButtonStyle = theme.ActionButtonsStyles
-
-  const cls = clsx(actionButtonStyle.base, isBlock && 'w-full')
+  const cls = clsx(ActionButtonsStyles.base, isBlock && 'w-full')
 
   return (
     <div className={cls}>

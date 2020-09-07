@@ -1,5 +1,4 @@
 import { useClickAwayOrEsc, useMountedState } from '@retail-ui/hooks'
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import { Transition } from '@retail-ui/transition'
 import clsx from 'clsx'
 import * as React from 'react'
@@ -7,11 +6,12 @@ import { createPortal } from 'react-dom'
 import FocusLock from 'react-focus-lock'
 
 import { DialogProvider } from './DialogContext'
+import { DialogStyles } from './styles'
 
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
 
-type DialogSize = keyof Theme['DialogStyles']['size']
+type DialogSize = keyof typeof DialogStyles['size']
 
 export type DialogProps = {
   isOpen: boolean
@@ -31,10 +31,6 @@ export const Dialog = React.forwardRef<Ref, ReactDivProps & DialogProps>(
       size = 'base',
       ...rest
     } = props
-
-    const {
-      theme: { DialogStyles },
-    } = useThemeCtx()
 
     const contentRef = useClickAwayOrEsc(onClose)
 

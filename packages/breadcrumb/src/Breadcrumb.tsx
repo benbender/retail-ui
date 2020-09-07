@@ -1,6 +1,7 @@
-import { useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
+
+import { BreadcrumbStyles } from './styles'
 
 type ReactUListProps = React.HTMLAttributes<HTMLUListElement>
 type Ref = HTMLUListElement
@@ -12,9 +13,6 @@ export const Breadcrumb = React.forwardRef<
   ReactUListProps & BreadcrumbProps
 >((props, ref) => {
   const { children, className, ...rest } = props
-  const {
-    theme: { BreadcrumbStyles },
-  } = useThemeCtx()
 
   const cls = clsx(className, BreadcrumbStyles.base)
 

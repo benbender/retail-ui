@@ -1,12 +1,13 @@
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import { cloneElement } from '@retail-ui/utils'
 import clsx from 'clsx'
 import * as React from 'react'
 
+import { AvatarStyles } from './styles'
+
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
 
-type AvatarSize = keyof Theme['AvatarStyles']['size']
+type AvatarSize = keyof typeof AvatarStyles['size']
 // type AvatarStatus = keyof Theme['Avatar']['status']
 
 export type AvatarProps = {
@@ -25,9 +26,6 @@ export type AvatarProps = {
 export const Avatar = React.forwardRef<Ref, ReactDivProps & AvatarProps>(
   (props, ref) => {
     const { size = 'base', className, alt, src, title, icon, ...rest } = props
-    const {
-      theme: { AvatarStyles },
-    } = useThemeCtx()
 
     const sizeCls = AvatarStyles.size
 
