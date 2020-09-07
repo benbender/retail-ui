@@ -6,9 +6,10 @@ import {
   ExclamationOutline,
   XSolid,
 } from '@retail-ui/heroicons'
-import { Theme, useThemeCtx } from '@retail-ui/theme'
 import clsx from 'clsx'
 import * as React from 'react'
+
+import { AlertStyles } from './styles'
 
 type ReactDivProps = Omit<React.HTMLAttributes<HTMLDivElement>, ''>
 type Ref = HTMLDivElement
@@ -20,10 +21,10 @@ const ALERT_STATUS_ICON = {
   warning: ExclamationOutline,
 }
 
-type AlertVariant = keyof Theme['AlertStyles']['variant']
-type AlertColor = keyof Theme['AlertStyles']['variant']['default']
-type AlertSize = keyof Theme['AlertStyles']['size']
-type AlertBordered = keyof Theme['AlertStyles']['bordered']
+type AlertVariant = keyof typeof AlertStyles['variant']
+type AlertColor = keyof typeof AlertStyles['variant']['default']
+type AlertSize = keyof typeof AlertStyles['size']
+type AlertBordered = keyof typeof AlertStyles['bordered']
 type AlertStatusIcon = keyof typeof ALERT_STATUS_ICON
 
 export type AlertProps = {
@@ -53,9 +54,6 @@ export const Alert = React.forwardRef<Ref, ReactDivProps & AlertProps>(
       ...rest
     } = props
 
-    const {
-      theme: { AlertStyles },
-    } = useThemeCtx()
     const variantCls = AlertStyles.variant
 
     const colorCls = variantCls[variant]
@@ -109,7 +107,7 @@ export const Alert = React.forwardRef<Ref, ReactDivProps & AlertProps>(
               color={color}
               size="base"
               shape="rounded"
-              icon={XSolid}
+              icon={<XSolid />}
               variant={btnVariant[variant]}
               onClick={onClose}
             />

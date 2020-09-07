@@ -1,5 +1,4 @@
 import { ActionButtonsStyles } from './styles/ActionButtonsStyles'
-import { AlertStyles } from './styles/AlertStyles'
 import { AvatarStyles } from './styles/AvatarStyles'
 import { BreadcrumbStyles } from './styles/BreadcrumbStyles'
 import { ButtonIconStyles } from './styles/ButtonIconStyles'
@@ -18,7 +17,6 @@ export const defaultTheme = {
   IconStyles,
   SpinnerStyles,
   ActionButtonsStyles,
-  AlertStyles,
   ButtonIconStyles,
   AvatarStyles,
   BreadcrumbStyles,

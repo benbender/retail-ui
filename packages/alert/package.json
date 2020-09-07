@@ -44,7 +44,6 @@
   },
   "devDependencies": {
     "@retail-ui/button-icon": "^0.4.1",
-    "@retail-ui/heroicons": "^0.2.6",
-    "@retail-ui/theme": "^0.5.0"
+    "@retail-ui/heroicons": "^0.2.6"
   }
 }
