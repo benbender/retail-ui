@@ -17,7 +17,7 @@ type DrawerPosition = keyof typeof DrawerStyles['position']
 export type DrawerProps = {
   isOpen: boolean
   onClose: () => void
-  onSubmit: () => void
+  onSubmit?: () => void
   size?: DrawerSize
   position?: DrawerPosition
 }

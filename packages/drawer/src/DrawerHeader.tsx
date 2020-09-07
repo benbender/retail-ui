@@ -21,7 +21,7 @@ export const DrawerHeader: React.FC<DrawerHeaderProps> = (props) => {
     <div className={cls}>
       {children}
       <ButtonIcon
-        icon={XSolid}
+        icon={<XSolid />}
         variant="light"
         onClick={onClose}
         color="secondary"

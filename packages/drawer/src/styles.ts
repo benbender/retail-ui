@@ -20,6 +20,6 @@ export const DrawerStyles = {
   },
   header: `flex justify-between items-center px-4 py-3 text-lg font-semibold border-b border-gray-200 text-gray-700 dark:text-gray-300`,
   body: `p-4 mb-2 text-sm text-gray-700 dark:text-gray-400 relative flex-auto overflow-y-auto`,
-  footer: `flex flex-col items-center justify-end px-6 py-3 space-y-4 sm:space-y-0 sm:space-x-6 sm:flex-row bg-gray-200 dark:bg-gray-800`,
+  footer: `flex items-center justify-end px-6 py-3 space-y-4 sm:space-y-0 sm:space-x-6 sm:flex-row bg-gray-200 dark:bg-gray-800`,
 }
 // "

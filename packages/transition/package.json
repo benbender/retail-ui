@@ -42,7 +42,8 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "@tailwindui/react": "^0.1.1"
   }
 }
