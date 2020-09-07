@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/sondh0127/retail-ui/compare/@retail-ui/drawer@0.5.2...@retail-ui/drawer@0.5.3) (2020-09-07)
+
+### Bug Fixes
+
+- **hooks:** fix click away hook for dialog and drawer ([ad68d8f](https://github.com/sondh0127/retail-ui/commit/ad68d8ff32d2620425e434632a91a4191592f6d2))
+
 ## [0.5.2](https://github.com/sondh0127/retail-ui/compare/@retail-ui/drawer@0.5.1...@retail-ui/drawer@0.5.2) (2020-09-07)
 
 **Note:** Version bump only for package @retail-ui/drawer
