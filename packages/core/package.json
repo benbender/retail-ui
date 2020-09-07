@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/core",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "The Core component of @retail-ui",
   "keywords": [
     "react",
@@ -54,8 +54,8 @@
     "@retail-ui/card": "^0.4.0",
     "@retail-ui/checkbox": "^0.6.0",
     "@retail-ui/collapse": "^0.5.0",
-    "@retail-ui/dialog": "^0.5.0",
-    "@retail-ui/drawer": "^0.5.0",
+    "@retail-ui/dialog": "^0.5.1",
+    "@retail-ui/drawer": "^0.5.1",
     "@retail-ui/dropdown": "^0.4.0",
     "@retail-ui/heroicons": "^0.2.7",
     "@retail-ui/hooks": "^0.3.0",
@@ -69,7 +69,7 @@
     "@retail-ui/switch": "^0.5.0",
     "@retail-ui/table": "^0.5.0",
     "@retail-ui/theme": "^0.6.0",
-    "@retail-ui/transition": "^0.4.0",
+    "@retail-ui/transition": "^0.4.1",
     "@retail-ui/utils": "^0.4.0",
     "@tailwindcss/custom-forms": "0.2.1",
     "deepmerge": "^4.2.2",

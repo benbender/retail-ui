@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/drawer",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "The Drawer component of @retail-ui",
   "keywords": [
     "react",
@@ -47,7 +47,7 @@
     "@retail-ui/button-icon": "^0.5.0",
     "@retail-ui/heroicons": "^0.2.7",
     "@retail-ui/hooks": "^0.3.0",
-    "@retail-ui/transition": "^0.4.0"
+    "@retail-ui/transition": "^0.4.1"
   },
   "dependencies": {
     "react-focus-lock": "^2.4.1"
