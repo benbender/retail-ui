@@ -1,3 +1,4 @@
+import { Button } from '@retail-ui/button'
 import * as React from 'react'
 
 import {
@@ -16,22 +17,26 @@ const meta = {
 export default meta
 
 const Template = (args: DialogProps) => {
+  const [isOpen, setIsOpen] = React.useState(false)
   return (
-    <Dialog
-      data-testid={meta.title}
-      {...args}
-      isOpen={false}
-      onClose={() => {}}
-      onSubmit={() => {}}
-    >
-      <DialogHeader>Basic: Dialog Title</DialogHeader>
-      <DialogBody>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius
-        fugiat illum repudiandae commodi inventore magnam unde vero cupiditate
-        molestiae?
-      </DialogBody>
-      <DialogFooter />
-    </Dialog>
+    <React.Fragment>
+      <Button onClick={() => setIsOpen(!isOpen)}>Open dialog</Button>
+      <Dialog
+        data-testid={meta.title}
+        {...args}
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        onSubmit={() => {}}
+      >
+        <DialogHeader>Basic: Dialog Title</DialogHeader>
+        <DialogBody>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+          eius fugiat illum repudiandae commodi inventore magnam unde vero
+          cupiditate molestiae?
+        </DialogBody>
+        <DialogFooter />
+      </Dialog>
+    </React.Fragment>
   )
 }
 

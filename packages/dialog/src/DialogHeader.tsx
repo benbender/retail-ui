@@ -22,7 +22,7 @@ export const DialogHeader: React.FC<DialogHeaderProps> = (props) => {
     <div className={cls} {...rest}>
       {children}
       <ButtonIcon
-        icon={XSolid}
+        icon={<XSolid />}
         variant="light"
         onClick={onClose}
         color="secondary"

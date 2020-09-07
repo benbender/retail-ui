@@ -3,7 +3,7 @@ import { useClickAway, useKeyPressEvent } from 'react-use'
 
 export const useClickAwayOrEsc = (handleFn: () => void) => {
   const ref = useRef(null)
-  useClickAway(ref, handleFn, ['click'])
+  useClickAway(ref, handleFn)
   useKeyPressEvent('Escape', handleFn)
   return ref
 }
