@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/icon",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "The Icon component of @retail-ui",
   "keywords": [
     "react",
@@ -42,6 +42,5 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "devDependencies": {},
   "gitHead": "929e4cfdd6ed4fd576af406c5281e9942717524f"
 }
