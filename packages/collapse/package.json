@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/collapse",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "The Collapse component of @retail-ui",
   "keywords": [
     "react",
@@ -43,8 +43,8 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/card": "^0.4.2",
+    "@retail-ui/card": "^0.4.3",
     "@retail-ui/heroicons": "^0.2.7",
-    "@retail-ui/hooks": "^0.3.2"
+    "@retail-ui/hooks": "^0.3.3"
   }
 }

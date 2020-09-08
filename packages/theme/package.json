@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/theme",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "The Theme component of @retail-ui",
   "keywords": [
     "react",
@@ -43,7 +43,7 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/hooks": "^0.3.2"
+    "@retail-ui/hooks": "^0.3.3"
   },
   "gitHead": "929e4cfdd6ed4fd576af406c5281e9942717524f"
 }

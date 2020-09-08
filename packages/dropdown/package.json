@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/dropdown",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "The Dropdown component of @retail-ui",
   "keywords": [
     "react",
@@ -43,6 +43,6 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/hooks": "^0.3.2"
+    "@retail-ui/hooks": "^0.3.3"
   }
 }

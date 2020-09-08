@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/sondh0127/retail-ui/compare/@retail-ui/card@0.4.2...@retail-ui/card@0.4.3) (2020-09-08)
+
+### Bug Fixes
+
+- **all:** change hooks to use ahooks instead of react-use ([957ddac](https://github.com/sondh0127/retail-ui/commit/957ddac510166a771bc0143408a0e4e71e39b973))
+
 ## [0.4.2](https://github.com/sondh0127/retail-ui/compare/@retail-ui/card@0.4.1...@retail-ui/card@0.4.2) (2020-09-07)
 
 **Note:** Version bump only for package @retail-ui/card
