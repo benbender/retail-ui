@@ -1,4 +1,4 @@
-import { useClickAwayOrEsc, useMountedState } from '@retail-ui/hooks'
+import { useClickAwayOrEsc, useMount } from '@retail-ui/hooks'
 import { Transition } from '@retail-ui/transition'
 import clsx from 'clsx'
 import * as React from 'react'
@@ -16,7 +16,7 @@ type DialogSize = keyof typeof DialogStyles['size']
 export type DialogProps = {
   isOpen: boolean
   onClose: () => void
-  onSubmit: () => void
+  onSubmit?: () => void
   size?: DialogSize
 }
 
@@ -31,10 +31,13 @@ export const Dialog = React.forwardRef<Ref, ReactDivProps & DialogProps>(
       size = 'base',
       ...rest
     } = props
+    const [isMounted, setIsMounted] = React.useState(false)
 
     const contentRef = useClickAwayOrEsc(onClose)
 
-    const isMounted = useMountedState()
+    useMount(() => {
+      setIsMounted(true)
+    })
 
     const cls = clsx(className, DialogStyles.base, DialogStyles.size[size])
 
@@ -74,7 +77,7 @@ export const Dialog = React.forwardRef<Ref, ReactDivProps & DialogProps>(
         </Transition>
       </DialogProvider>
     )
-    return isMounted() ? createPortal(modalComponent, document.body) : null
+    return isMounted ? createPortal(modalComponent, document.body) : null
   },
 )
 

@@ -11,5 +11,5 @@ Coming soon...
 Following that, usage should be as simple as:
 
 ```tsx
-import { Hooks } from '@retail-ui/hooks'
+import { useToggle } from '@retail-ui/hooks'
 ```

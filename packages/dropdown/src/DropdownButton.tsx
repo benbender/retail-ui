@@ -16,7 +16,13 @@ export const DropdownButton = React.forwardRef<
   const { toggleOpen } = useDropdownCtx()
 
   return (
-    <button ref={ref} {...rest} onClick={onClick ?? (() => toggleOpen())} />
+    <button
+      ref={ref}
+      onClick={() => {
+        toggleOpen()
+      }}
+      {...rest}
+    />
   )
 })
 

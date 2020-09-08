@@ -1,4 +1,4 @@
-import { useCreateCtx } from '@retail-ui/hooks'
+import { createCtx } from '@retail-ui/hooks'
 
 import { CardStyles } from './styles'
 
@@ -9,5 +9,4 @@ export type CardValue = {
   isLoading: boolean
 }
 
-// eslint-disable-next-line react-hooks/rules-of-hooks
-export const [useCardCtx, CardProvider] = useCreateCtx<CardValue>()
+export const [useCardCtx, CardProvider] = createCtx<CardValue>()

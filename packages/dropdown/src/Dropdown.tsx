@@ -1,4 +1,4 @@
-import { useToggle } from '@retail-ui/hooks'
+import { useControllableValue } from '@retail-ui/hooks'
 import clsx from 'clsx'
 import * as React from 'react'
 
@@ -10,25 +10,33 @@ type Ref = HTMLDivElement
 
 export interface DropdownProps {
   className?: string
-  onOpenChange?: (isOpen: boolean) => void
+  isOpen?: boolean
+  onChangeOpen?: (isOpen: boolean) => void
+  defaultOpen?: boolean
   children?: ((value: DropdownValue) => React.ReactNode) | React.ReactNode
 }
 
 export const Dropdown = React.forwardRef<Ref, ReactDivProps & DropdownProps>(
   (props, ref) => {
-    const { children, onOpenChange, ...rest } = props
+    const { children, ...rest } = props
 
-    const [isOpen, toggleOpen] = useToggle(false)
+    const [isOpen, setIsOpen] = useControllableValue<boolean>(props, {
+      defaultValue: false,
+      defaultValuePropName: `defaultOpen`,
+      valuePropName: `isOpen`,
+      trigger: `onChangeOpen`,
+    })
 
-    React.useEffect(() => {
-      if (onOpenChange) {
-        onOpenChange(isOpen)
-      }
-    }, [isOpen])
+    const toggleOpen = React.useCallback(
+      (newOpen?: boolean) => {
+        setIsOpen(newOpen ?? !isOpen)
+      },
+      [isOpen],
+    )
 
     const dropdownValue = React.useMemo(
       () => ({
-        isOpen,
+        isOpen: Boolean(isOpen),
         toggleOpen,
       }),
       [isOpen, toggleOpen],

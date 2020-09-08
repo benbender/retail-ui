@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { act, renderHook } from '@testing-library/react-hooks'
 import * as React from 'react'
 
-import { useCreateCtx } from '../src'
+import { createCtx } from '../src'
 
 describe('user context', () => {
   it('return provided user data', () => {
@@ -10,7 +10,7 @@ describe('user context', () => {
       id: string
       name: string
     }
-    const { result } = renderHook(() => useCreateCtx<User>())
+    const { result } = renderHook(() => createCtx<User>())
     act(() => {
       const useUserCtx = result.current[0]
       const UserProvider = result.current[1]

@@ -1,9 +1,8 @@
-import { useCreateCtx } from '@retail-ui/hooks'
+import { createCtx } from '@retail-ui/hooks'
 
 export type DialogValue = {
   onClose: () => void
-  onSubmit: () => void
+  onSubmit?: () => void
 }
 
-// eslint-disable-next-line react-hooks/rules-of-hooks
-export const [useDialogCtx, DialogProvider] = useCreateCtx<DialogValue>()
+export const [useDialogCtx, DialogProvider] = createCtx<DialogValue>()

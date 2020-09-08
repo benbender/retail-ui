@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export const useCreateCtx = <T extends Record<string, unknown> | null>() => {
+export const createCtx = <T extends Record<string, unknown> | null>() => {
   const ctx = React.createContext<T | undefined>(undefined)
 
   const useCtx = () => {

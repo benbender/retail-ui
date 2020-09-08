@@ -1,4 +1,4 @@
-import { useClickAwayOrEsc, useMountedState } from '@retail-ui/hooks'
+import { useClickAwayOrEsc, useMount } from '@retail-ui/hooks'
 import { Transition } from '@retail-ui/transition'
 import clsx from 'clsx'
 import * as React from 'react'
@@ -33,9 +33,12 @@ export const Drawer = React.forwardRef<Ref, ReactDivProps & DrawerProps>(
       position = 'left',
       ...rest
     } = props
+    const [isMounted, setIsMounted] = React.useState(false)
+    const contentRef = useClickAwayOrEsc(() => onClose())
 
-    const contentRef = useClickAwayOrEsc(onClose)
-    const isMounted = useMountedState()
+    useMount(() => {
+      setIsMounted(true)
+    })
 
     const positionStyles = DrawerStyles.position[position]
 
@@ -85,7 +88,7 @@ export const Drawer = React.forwardRef<Ref, ReactDivProps & DrawerProps>(
         </Transition>
       </DrawerProvider>
     )
-    return isMounted() ? createPortal(modalComponent, document.body) : null
+    return isMounted ? createPortal(modalComponent, document.body) : null
   },
 )
 
