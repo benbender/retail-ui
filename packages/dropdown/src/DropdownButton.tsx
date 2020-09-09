@@ -1,29 +1,21 @@
+import { cloneElement } from '@retail-ui/utils'
 import * as React from 'react'
 
 import { useDropdownCtx } from './DropdownContext'
-
 type ReactButtonProp = React.ButtonHTMLAttributes<HTMLButtonElement>
-type Ref = HTMLButtonElement
 
-export type DropdownButtonProps = {}
-
-export const DropdownButton = React.forwardRef<
-  Ref,
-  ReactButtonProp & DropdownButtonProps
->((props, ref) => {
-  const { onClick, ...rest } = props
+export const DropdownButton: React.FC<ReactButtonProp> = (props) => {
+  const { children, onClick, ...rest } = props
 
   const { toggleOpen } = useDropdownCtx()
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    toggleOpen()
+    if (onClick) {
+      onClick(e)
+    }
+  }
 
-  return (
-    <button
-      ref={ref}
-      onClick={() => {
-        toggleOpen()
-      }}
-      {...rest}
-    />
-  )
-})
+  const buttonChild = cloneElement(children, { onClick: handleClick, ...rest })
 
-DropdownButton.displayName = 'DropdownButton'
+  return buttonChild
+}

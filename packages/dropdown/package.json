@@ -43,6 +43,7 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/hooks": "^0.3.3"
+    "@retail-ui/hooks": "^0.3.3",
+    "@retail-ui/utils": "^0.4.0"
   }
 }

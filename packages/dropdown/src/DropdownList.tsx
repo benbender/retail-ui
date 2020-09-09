@@ -7,28 +7,31 @@ import FocusLock from 'react-focus-lock'
 import { useDropdownCtx } from './DropdownContext'
 import { DropdownStyles } from './styles'
 
-type DropdownListAlign = keyof typeof DropdownStyles['list']['align']
 type DropdownListSize = keyof typeof DropdownStyles['list']['size']
 
 interface DropdownListProps {
   className?: string
-  align?: DropdownListAlign
+  isAlignRight?: boolean
   size?: DropdownListSize
 }
 
 export const DropdownList: React.FC<DropdownListProps> = (props) => {
-  const { className, align = 'left', size = 'base', children } = props
+  const { className, isAlignRight, size = 'base', children } = props
   const { toggleOpen, isOpen } = useDropdownCtx()
 
   const ref = useClickAwayOrEsc(() => toggleOpen(false))
 
+  // class="
   const cls = clsx(
     className,
     DropdownStyles.list.base,
-    align && DropdownStyles.list.align[align],
+    isAlignRight && `-translate-x-full`,
     size && DropdownStyles.list.size[size],
   )
 
+  const wrapperCsl = clsx(`absolute`, isAlignRight && `z-10 right-0 z-10`)
+
+  // "
   return (
     <Transition
       show={isOpen}
@@ -38,11 +41,13 @@ export const DropdownList: React.FC<DropdownListProps> = (props) => {
       leave="transition duration-150"
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
-      as="ul"
-      className={cls}
+      as="div"
+      className={wrapperCsl}
     >
       <FocusLock returnFocus>
-        <div ref={ref}>{children}</div>
+        <div className={cls} ref={ref}>
+          {children}
+        </div>
       </FocusLock>
     </Transition>
   )

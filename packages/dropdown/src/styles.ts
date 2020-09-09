@@ -1,12 +1,8 @@
 // class="
 export const DropdownStyles = {
-  base: `relative inline-block`,
+  base: `inline-block relative`,
   list: {
-    base: `flex p-2 flex-col space-y-2 mt-2 absolute z-10 w-56 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700`,
-    align: {
-      left: `left-0`,
-      right: `right-0`,
-    },
+    base: `transform translate-y-1 flex py-1 flex-col  fixed w-56 text-gray-600 bg-white border border-gray-200 rounded-md shadow-lg dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700 `,
     size: {
       sm: `w-40`,
       base: `w-56`,
@@ -14,8 +10,7 @@ export const DropdownStyles = {
     },
   },
   item: {
-    // class="
-    base: `inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-200 whitespace-no-wrap no-underline hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200 focus:shadow-outline focus:outline-none focus:bg-gray-200 cursor-pointer`,
+    base: `inline-flex items-center w-full px-3 py-2 text-sm font-semibold transition-colors duration-150 hover:bg-gray-200 whitespace-no-wrap no-underline hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200 focus:outline-none focus:bg-gray-200 shadow-none`,
     size: {
       base: `text-xs`,
       sm: `text-md`,
@@ -47,3 +42,4 @@ export const DropdownStyles = {
     },
   },
 }
+// "
