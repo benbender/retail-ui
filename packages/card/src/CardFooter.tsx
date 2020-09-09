@@ -14,7 +14,7 @@ export type CardFooterProps = {
 export const CardFooter = React.forwardRef<
   Ref,
   ReactDivProps & CardFooterProps
->((props) => {
+>((props, ref) => {
   const { children, className, isTransparent, ...rest } = props
 
   const { color, isLoading } = useCardCtx()
@@ -29,7 +29,7 @@ export const CardFooter = React.forwardRef<
   )
 
   return (
-    <div className={cls} {...rest}>
+    <div ref={ref} className={cls} {...rest}>
       {children}
     </div>
   )

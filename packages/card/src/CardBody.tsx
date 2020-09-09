@@ -11,7 +11,7 @@ type Ref = HTMLDivElement
 export type CardBodyProps = {}
 
 export const CardBody = React.forwardRef<Ref, ReactDivProps & CardBodyProps>(
-  (props) => {
+  (props, ref) => {
     const { children, className, ...rest } = props
 
     const { color, isLoading } = useCardCtx()
@@ -26,7 +26,7 @@ export const CardBody = React.forwardRef<Ref, ReactDivProps & CardBodyProps>(
     )
 
     return (
-      <div className={cls} {...rest}>
+      <div ref={ref} className={cls} {...rest}>
         <div className={childrenCls}>{children}</div>
         {isLoading && <Spinner className={spinnerCls} />}
       </div>

@@ -16,7 +16,7 @@ export type CardHeaderProps = {
 export const CardHeader = React.forwardRef<
   Ref,
   ReactDivProps & CardHeaderProps
->((props) => {
+>((props, ref) => {
   const { children, className, title, subtitle, action, ...rest } = props
 
   const { color } = useCardCtx()
@@ -46,7 +46,7 @@ export const CardHeader = React.forwardRef<
   }
 
   return (
-    <div className={cls} {...rest}>
+    <div ref={ref} className={cls} {...rest}>
       {titleRender}
       {action}
     </div>
