@@ -31,7 +31,7 @@ export const DropdownList: React.FC<DropdownListProps> = (props) => {
     size && DropdownStyles.list.size[size],
   )
 
-  const wrapperCsl = clsx(`absolute`, isAlignRight && `z-10 right-0 z-10`)
+  const wrapperCsl = clsx(`absolute z-10`, isAlignRight && `right-0`)
 
   // "
   return (
