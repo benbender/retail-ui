@@ -17,7 +17,7 @@ type InputAddonProps = {
 export const InputAddon = React.forwardRef<
   Ref,
   ReactDivProps & InputAddonProps
->((props) => {
+>((props, ref) => {
   const { children, className, position = 'left', element = 'icon' } = props
 
   const addonStyles = InputStyles.addon[position]
@@ -29,7 +29,11 @@ export const InputAddon = React.forwardRef<
     element === 'icon' && addonStyles.element.icon,
   )
 
-  return <div className={cls}>{children}</div>
+  return (
+    <div ref={ref} className={cls}>
+      {children}
+    </div>
+  )
 })
 
 InputAddon.displayName = 'InputAddon'
