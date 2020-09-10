@@ -46,8 +46,6 @@
     "@testing-library/react-hooks": "^3.4.1",
     "@types/testing-library__react-hooks": "^3.4.0"
   },
-  "dependencies": {
-    "ahooks": "^2.5.0"
-  },
+  "dependencies": {},
   "gitHead": "929e4cfdd6ed4fd576af406c5281e9942717524f"
 }

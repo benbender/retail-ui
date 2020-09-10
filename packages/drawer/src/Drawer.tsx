@@ -1,12 +1,12 @@
-import { useClickAwayOrEsc, useMount } from '@retail-ui/hooks'
 import { Transition } from '@retail-ui/transition'
 import clsx from 'clsx'
 import * as React from 'react'
 import { createPortal } from 'react-dom'
 import FocusLock from 'react-focus-lock'
+import { useClickAway, useKey, useMountedState } from 'react-use'
 
-import { DrawerProvider } from './DrawerContext'
-import { DrawerStyles } from './styles'
+import { DrawerProvider } from '../src/DrawerContext'
+import { DrawerStyles } from '../src/styles'
 
 type ReactDivProps = React.HTMLAttributes<HTMLDivElement>
 type Ref = HTMLDivElement
@@ -33,12 +33,11 @@ export const Drawer = React.forwardRef<Ref, ReactDivProps & DrawerProps>(
       position = 'left',
       ...rest
     } = props
-    const [isMounted, setIsMounted] = React.useState(false)
-    const contentRef = useClickAwayOrEsc(() => onClose())
+    const isMounted = useMountedState()
 
-    useMount(() => {
-      setIsMounted(true)
-    })
+    const contentRef = React.useRef<HTMLDivElement>(null)
+    useClickAway(contentRef, () => onClose())
+    useKey('Escape', () => onClose())
 
     const positionStyles = DrawerStyles.position[position]
 
@@ -88,7 +87,7 @@ export const Drawer = React.forwardRef<Ref, ReactDivProps & DrawerProps>(
         </Transition>
       </DrawerProvider>
     )
-    return isMounted ? createPortal(modalComponent, document.body) : null
+    return isMounted() ? createPortal(modalComponent, document.body) : null
   },
 )
 

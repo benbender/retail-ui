@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-import { constant } from 'lodash'
 import * as React from 'react'
 
 import { CollapseProvider } from './CollapseContext'
@@ -17,7 +16,8 @@ export const Collapse = React.forwardRef<Ref, ReactDivProps & CollapseProps>(
     const { children, hasBorder, className, ...rest } = props
 
     const [collapses, setCollapses] = React.useState([
-      ...[...Array(React.Children.count(children))].map(constant(false)),
+      // eslint-disable-next-line lodash/prefer-constant
+      ...[...Array(React.Children.count(children))].map(() => false),
     ])
 
     const renderChildren = React.useMemo(() => {

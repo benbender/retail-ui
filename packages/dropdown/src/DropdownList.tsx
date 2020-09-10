@@ -1,8 +1,8 @@
-import { useClickAwayOrEsc } from '@retail-ui/hooks'
-import { Transition } from '@tailwindui/react'
+import { Transition } from '@retail-ui/transition'
 import clsx from 'clsx'
 import * as React from 'react'
 import FocusLock from 'react-focus-lock'
+import { useClickAway, useKey } from 'react-use'
 
 import { useDropdownCtx } from './DropdownContext'
 import { DropdownStyles } from './styles'
@@ -19,7 +19,9 @@ export const DropdownList: React.FC<DropdownListProps> = (props) => {
   const { className, isAlignRight, size = 'base', children } = props
   const { toggleOpen, isOpen } = useDropdownCtx()
 
-  const ref = useClickAwayOrEsc(() => toggleOpen(false))
+  const ref = React.useRef<HTMLDivElement>(null)
+  useClickAway(ref, () => toggleOpen(false), ['click'])
+  useKey('Escape', () => toggleOpen(false))
 
   // class="
   const cls = clsx(

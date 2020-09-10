@@ -42,5 +42,8 @@
   "peerDependencies": {
     "react": ">=16"
   },
+  "dependencies": {
+    "clsx": "^1.1.1"
+  },
   "gitHead": "929e4cfdd6ed4fd576af406c5281e9942717524f"
 }

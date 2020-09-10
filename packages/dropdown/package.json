@@ -42,7 +42,12 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "devDependencies": {
+  "dependencies": {
+    "react-focus-lock": "^2.4.1",
+    "react-use": "^15.3.4",
+    "ahooks": "^2.6.0",
+    "clsx": "^1.1.1",
+    "@retail-ui/transition": "^0.4.1",
     "@retail-ui/hooks": "^0.3.3",
     "@retail-ui/utils": "^0.4.0"
   }

@@ -41,5 +41,8 @@
   },
   "peerDependencies": {
     "react": ">=16"
+  },
+  "dependencies": {
+    "clsx": "^1.1.1"
   }
 }

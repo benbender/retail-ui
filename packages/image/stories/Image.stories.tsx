@@ -8,7 +8,7 @@ const meta = {
 }
 
 export default meta
-export const src =
+const src =
   'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80'
 
 const Template = (args: ImageProps) => (

@@ -42,7 +42,7 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "devDependencies": {
+  "dependencies": {
     "@retail-ui/icon": "^0.4.0"
   },
   "gitHead": "929e4cfdd6ed4fd576af406c5281e9942717524f"

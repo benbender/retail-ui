@@ -45,5 +45,5 @@ to: packages/<%= name %>/package.json
   "peerDependencies": {
     "react": ">=16"
   },
-  "devDependencies": {}
+  "dependencies": {}
 }

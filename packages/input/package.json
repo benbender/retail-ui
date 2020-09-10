@@ -42,7 +42,7 @@
   "peerDependencies": {
     "react": ">=16"
   },
-  "devDependencies": {
-    "@retail-ui/hooks": "^0.3.3"
+  "dependencies": {
+    "clsx": "^1.1.1"
   }
 }

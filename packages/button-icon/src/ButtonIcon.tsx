@@ -1,13 +1,13 @@
 import { Spinner } from '@retail-ui/spinner'
 import { cloneElement } from '@retail-ui/utils'
 import clsx from 'clsx'
-import React, { ButtonHTMLAttributes } from 'react'
+import * as React from 'react'
 
 import { ButtonIconStyles } from './styles'
 
 type Ref = HTMLButtonElement
 type ReactButtonProps = Omit<
-  ButtonHTMLAttributes<HTMLButtonElement>,
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
   'disabled'
 >
 

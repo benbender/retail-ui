@@ -15,6 +15,4 @@ const Template = (args: SwitchProps) => (
 
 export const Simple = Template.bind({})
 // @ts-ignore
-Simple.args = {
-  children: 'Switch',
-}
+Simple.args = {}
