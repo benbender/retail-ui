@@ -29,17 +29,17 @@ export const DropdownStyles = {
   // icons
   buttonIcon: `h-4 w-4 text-gray-600`,
   arrow: `text-current h-4 w-4 inline align-middle transition ease-out duration-200 transform ml-1 -mr-1 flex-none`,
-  mix: {
-    '.dropdown-arrow': {
-      marginTop: '-3px',
-      '@apply ': {},
-    },
-    '.btn-sm .dropdown-arrow': {
-      '@apply ml-0': {},
-    },
-    '.btn-lg .dropdown-arrow': {
-      '@apply h-6 w-6 !important': {},
-    },
-  },
+  // mix: {
+  //   '.dropdown-arrow': {
+  //     marginTop: '-3px',
+  //     '@apply ': {},
+  //   },
+  //   '.btn-sm .dropdown-arrow': {
+  //     '@apply ml-0': {},
+  //   },
+  //   '.btn-lg .dropdown-arrow': {
+  //     '@apply h-6 w-6 !important': {},
+  //   },
+  // },
 }
 // "
