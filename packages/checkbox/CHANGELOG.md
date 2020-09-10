@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/checkbox@0.6.0...@retail-ui/checkbox@0.7.0) (2020-09-10)
+
+### Features
+
+- **all:** bump devdeps to deps ([429a82f](https://github.com/sondh0127/retail-ui/commit/429a82f613c307ff079f78fe15ab9e271620ecdf))
+
 # [0.6.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/checkbox@0.5.0...@retail-ui/checkbox@0.6.0) (2020-09-07)
 
 ### Features

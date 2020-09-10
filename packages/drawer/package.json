@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/drawer",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "description": "The Drawer component of @retail-ui",
   "keywords": [
     "react",
@@ -43,13 +43,13 @@
     "react": ">=16"
   },
   "dependencies": {
-    "react-focus-lock": "^2.4.1",
+    "@retail-ui/action-buttons": "^0.6.0",
+    "@retail-ui/button-icon": "^0.6.0",
+    "@retail-ui/heroicons": "^0.3.0",
+    "@retail-ui/hooks": "^0.4.0",
+    "@retail-ui/transition": "^0.4.1",
     "clsx": "^1.1.1",
-    "react-use": "^15.3.4",
-    "@retail-ui/action-buttons": "^0.5.0",
-    "@retail-ui/button-icon": "^0.5.0",
-    "@retail-ui/heroicons": "^0.2.7",
-    "@retail-ui/hooks": "^0.3.3",
-    "@retail-ui/transition": "^0.4.1"
+    "react-focus-lock": "^2.4.1",
+    "react-use": "^15.3.4"
   }
 }

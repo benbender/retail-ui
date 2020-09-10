@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/collapse@0.5.3...@retail-ui/collapse@0.6.0) (2020-09-10)
+
+### Bug Fixes
+
+- **collapse:** fix forwardref ([8b7193b](https://github.com/sondh0127/retail-ui/commit/8b7193b0a804136d70ff9ddee861be72d6cf005e))
+
+### Features
+
+- **all:** bump devdeps to deps ([429a82f](https://github.com/sondh0127/retail-ui/commit/429a82f613c307ff079f78fe15ab9e271620ecdf))
+
 ## [0.5.3](https://github.com/sondh0127/retail-ui/compare/@retail-ui/collapse@0.5.2...@retail-ui/collapse@0.5.3) (2020-09-08)
 
 ### Bug Fixes

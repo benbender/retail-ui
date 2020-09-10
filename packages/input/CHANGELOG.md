@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/input@0.5.3...@retail-ui/input@0.6.0) (2020-09-10)
+
+### Bug Fixes
+
+- **input:** fix forward ([d98ff38](https://github.com/sondh0127/retail-ui/commit/d98ff38e016d4d74c966ccab1047af0524626618))
+
+### Features
+
+- **all:** bump devdeps to deps ([429a82f](https://github.com/sondh0127/retail-ui/commit/429a82f613c307ff079f78fe15ab9e271620ecdf))
+
 ## [0.5.3](https://github.com/sondh0127/retail-ui/compare/@retail-ui/input@0.5.2...@retail-ui/input@0.5.3) (2020-09-08)
 
 **Note:** Version bump only for package @retail-ui/input

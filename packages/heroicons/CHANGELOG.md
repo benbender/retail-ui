@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/heroicons@0.2.7...@retail-ui/heroicons@0.3.0) (2020-09-10)
+
+### Features
+
+- **all:** bump devdeps to deps ([429a82f](https://github.com/sondh0127/retail-ui/commit/429a82f613c307ff079f78fe15ab9e271620ecdf))
+
 ## [0.2.7](https://github.com/sondh0127/retail-ui/compare/@retail-ui/heroicons@0.2.6...@retail-ui/heroicons@0.2.7) (2020-09-07)
 
 **Note:** Version bump only for package @retail-ui/heroicons

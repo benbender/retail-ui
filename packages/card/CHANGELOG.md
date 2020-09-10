@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/card@0.4.3...@retail-ui/card@0.5.0) (2020-09-10)
+
+### Bug Fixes
+
+- **card:** fix forward ref ([92753ac](https://github.com/sondh0127/retail-ui/commit/92753ac65ef1e343d3b29cfb1e5e55cb2b8a7411))
+
+### Features
+
+- **all:** bump devdeps to deps ([429a82f](https://github.com/sondh0127/retail-ui/commit/429a82f613c307ff079f78fe15ab9e271620ecdf))
+
 ## [0.4.3](https://github.com/sondh0127/retail-ui/compare/@retail-ui/card@0.4.2...@retail-ui/card@0.4.3) (2020-09-08)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/test-utils",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Testing utilities for components of @retail-ui",
   "keywords": [
     "react",
@@ -43,7 +43,7 @@
     "react": ">=16"
   },
   "devDependencies": {
-    "@retail-ui/theme": "^0.6.3",
+    "@retail-ui/theme": "^0.7.0",
     "@testing-library/react": "10.4.9"
   }
 }

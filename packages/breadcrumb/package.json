@@ -1,6 +1,6 @@
 {
   "name": "@retail-ui/breadcrumb",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "The Breadcrumb component of @retail-ui",
   "keywords": [
     "react",
@@ -43,7 +43,7 @@
     "react": ">=16"
   },
   "dependencies": {
-    "clsx": "^1.1.1",
-    "@retail-ui/utils": "^0.4.0"
+    "@retail-ui/utils": "^0.4.0",
+    "clsx": "^1.1.1"
   }
 }

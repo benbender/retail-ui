@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/sondh0127/retail-ui/compare/@retail-ui/dropdown@0.4.3...@retail-ui/dropdown@0.5.0) (2020-09-10)
+
+### Bug Fixes
+
+- **dropdown:** fix dropdown position inside other element ([52597ee](https://github.com/sondh0127/retail-ui/commit/52597ee4e0d9a6bb0f564905ef5850f34613cb7c))
+
+### Features
+
+- **all:** bump devdeps to deps ([429a82f](https://github.com/sondh0127/retail-ui/commit/429a82f613c307ff079f78fe15ab9e271620ecdf))
+
 ## [0.4.3](https://github.com/sondh0127/retail-ui/compare/@retail-ui/dropdown@0.4.2...@retail-ui/dropdown@0.4.3) (2020-09-08)
 
 ### Bug Fixes
