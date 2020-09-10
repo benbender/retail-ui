@@ -25,7 +25,7 @@ interface CollapsePanelProps {
 export const CollapsePanel = React.forwardRef<
   Ref,
   ReactDivProps & CollapsePanelProps
->((props) => {
+>((props, ref) => {
   const { children, className, buttonNode, title, index, ...rest } = props
 
   const { collapses, setCollapses } = useCollapseCtx()
@@ -80,7 +80,7 @@ export const CollapsePanel = React.forwardRef<
   }
 
   return (
-    <div className={collapsePanelCls}>
+    <div ref={ref} className={collapsePanelCls}>
       {buttonRender}
       {cardRender}
     </div>
