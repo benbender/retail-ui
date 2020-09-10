@@ -20,15 +20,12 @@ export const Dropdown = React.forwardRef<Ref, ReactDivProps & DropdownProps>(
   (props, ref) => {
     const { children, isOpen: isOpenProp, onChangeOpen, ...rest } = props
 
-    const [isOpen, setIsOpen] = useControllableValue<boolean>(
-      { isOpen: isOpenProp, onChangeOpen },
-      {
-        defaultValue: false,
-        defaultValuePropName: `defaultOpen`,
-        valuePropName: `isOpen`,
-        trigger: `onChangeOpen`,
-      },
-    )
+    const [isOpen, setIsOpen] = useControllableValue<boolean>(props, {
+      defaultValue: false,
+      defaultValuePropName: `defaultOpen`,
+      valuePropName: `isOpen`,
+      trigger: `onChangeOpen`,
+    })
 
     const toggleOpen = React.useCallback(
       (newOpen?: boolean) => {
