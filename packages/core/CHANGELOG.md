@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.11](https://github.com/sondh0127/retail-ui/compare/@retail-ui/core@0.6.10...@retail-ui/core@0.6.11) (2020-09-11)
+
+### Bug Fixes
+
+- **core:** fix purge production ([70a9be5](https://github.com/sondh0127/retail-ui/commit/70a9be51731c49d3d13e7b3ec597760d5c37905b))
+
 ## [0.6.10](https://github.com/sondh0127/retail-ui/compare/@retail-ui/core@0.6.9...@retail-ui/core@0.6.10) (2020-09-10)
 
 **Note:** Version bump only for package @retail-ui/core
