@@ -7,7 +7,7 @@ const plugin = require('tailwindcss/plugin')
 
 const retailUIConfig = {
   purge: {
-    content: ['node_modules/@retail-ui/core/dist/index.js'],
+    content: ['node_modules/@retail-ui/**/*/dist/*.js'],
     options: {
       whitelist: ['theme-dark'],
     },
