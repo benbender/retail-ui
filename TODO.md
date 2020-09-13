@@ -6,20 +6,6 @@ Project Description
 
 ### **Todo**
 
-- [ ] 🔎 core
-- [ ] Docs
-- [ ] Checkbox
-- [ ] Collapse
-- [ ] Dialog
-- [ ] Drawer
-- [ ] Dropdown
-- [ ] Image
-- [ ] Pagination
-- [ ] Status
-- [ ] Switch
-- [ ] Table
-- [ ] Transition
-
 ### In Progress
 
 ### Done ✓
@@ -40,3 +26,16 @@ Project Description
 - [x] heroicons
 - [x] hooks
 - [x] useCreateCtx
+- [x] 🔎 core
+- [x] Docs
+- [x] Checkbox
+- [x] Collapse
+- [x] Dialog
+- [x] Drawer
+- [x] Dropdown
+- [x] Image
+- [x] Pagination
+- [x] Status
+- [x] Switch
+- [x] Table
+- [x] Transition
